@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/postconviction" xmlns:investigation="http://gov/usc/codex/pacts/investigation" xmlns:client="http://gov/usc/codex/pacts/client" xmlns:docket="http://gov/usc/codex/pacts/docket" xmlns:core="http://gov/usc/codex/core" xmlns:postconviction="http://gov/usc/codex/pacts/postconviction" xmlns:reftype="http://gov/usc/codex/pacts/reftype" xmlns:district="http://gov/usc/codex/pacts/district" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/pacts/investigation" schemaLocation="investigation.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/client" schemaLocation="client.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/docket" schemaLocation="docket.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/reftype" schemaLocation="reftype.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/district" schemaLocation="district.xsd"/>
+  <xs:complexType name="clientPostConviction">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for clientPostConviction complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="clientPostConviction">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/client}clientBase">
+&lt;sequence>
+&lt;element name="docketDefendantPostConvictions" type="{http://gov/usc/codex/pacts/postconviction}docketDefendantPostConviction" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="postConvictionInvestigations" type="{http://gov/usc/codex/pacts/postconviction}postConvictionInvestigation" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="client:clientBase">
+        <xs:sequence>
+          <xs:element name="docketDefendantPostConvictions" type="postconviction:docketDefendantPostConviction" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="postConvictionInvestigations" type="postconviction:postConvictionInvestigation" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="docketDefendantPostConviction">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for docketDefendantPostConviction complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="docketDefendantPostConviction">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/docket}docketDefendantBase">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="docket" type="{http://gov/usc/codex/pacts/docket}docketBase" minOccurs="0"/>
+&lt;element name="postConvictionConditions" type="{http://gov/usc/codex/pacts/postconviction}postConvictionCondition" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="postConvictionInvestigations" type="{http://gov/usc/codex/pacts/postconviction}postConvictionInvestigation" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="postConvictionSupervisions" type="{http://gov/usc/codex/pacts/postconviction}postConvictionSupervision" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="docket:docketDefendantBase">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="docket" type="docket:docketBase" minOccurs="0"/>
+          <xs:element name="postConvictionConditions" type="postconviction:postConvictionCondition" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="postConvictionInvestigations" type="postconviction:postConvictionInvestigation" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="postConvictionSupervisions" type="postconviction:postConvictionSupervision" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="docketDefendantPostConvictionClient">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for docketDefendantPostConvictionClient complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="docketDefendantPostConvictionClient">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/docket}docketDefendantBase">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="client" type="{http://gov/usc/codex/pacts/postconviction}clientPostConviction" minOccurs="0"/>
+&lt;element name="docket" type="{http://gov/usc/codex/pacts/docket}docketBase" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="docket:docketDefendantBase">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="client" type="postconviction:clientPostConviction" minOccurs="0"/>
+          <xs:element name="docket" type="docket:docketBase" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="postConvictionClientInvestigation">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for postConvictionClientInvestigation complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="postConvictionClientInvestigation">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/investigation}simpleInvestigation">
+&lt;sequence>
+&lt;element name="investType" type="{http://gov/usc/codex/pacts/reftype}investType" minOccurs="0"/>
+&lt;element name="investTypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officer" type="{http://gov/usc/codex/pacts/district}staff" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="investigation:simpleInvestigation">
+        <xs:sequence>
+          <xs:element name="investType" type="reftype:investType" minOccurs="0"/>
+          <xs:element name="investTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="officer" type="district:staff" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="postConvictionCondition">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for postConvictionCondition complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="postConvictionCondition">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="amountDue" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountImposed" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountSatisfied" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountScheduled" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="byDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="conditionStatus" type="{http://gov/usc/codex/pacts/reftype}condStatus" minOccurs="0"/>
+&lt;element name="conditionStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="conditionType" type="{http://gov/usc/codex/pacts/reftype}conditionType" minOccurs="0"/>
+&lt;element name="conditionTypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="copay" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dateImposed" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="docketDefendantId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="imposedBy" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="imposedByJudge" type="{http://gov/usc/codex/pacts/district}judge" minOccurs="0"/>
+&lt;element name="locMonitorPgm" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="monitorMethod" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="nteTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="paymentStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="percentMeasure" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="percentPay" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="removedBy" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="removedByJudge" type="{http://gov/usc/codex/pacts/district}judge" minOccurs="0"/>
+&lt;element name="schedulePeriod" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="statusDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="unitOfMeasure" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="amountDue" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountImposed" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountSatisfied" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountScheduled" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="byDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionStatus" type="reftype:condStatus" minOccurs="0"/>
+          <xs:element name="conditionStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionType" type="reftype:conditionType" minOccurs="0"/>
+          <xs:element name="conditionTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="copay" type="xs:string" minOccurs="0"/>
+          <xs:element name="dateImposed" type="xs:string" minOccurs="0"/>
+          <xs:element name="docketDefendantId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="imposedBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="imposedByJudge" type="district:judge" minOccurs="0"/>
+          <xs:element name="locMonitorPgm" type="xs:string" minOccurs="0"/>
+          <xs:element name="monitorMethod" type="xs:string" minOccurs="0"/>
+          <xs:element name="nteTime" type="xs:string" minOccurs="0"/>
+          <xs:element name="paymentStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="percentMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="percentPay" type="xs:short" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="removedBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="removedByJudge" type="district:judge" minOccurs="0"/>
+          <xs:element name="schedulePeriod" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="unitOfMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="postConvictionConditionBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for postConvictionConditionBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="postConvictionConditionBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="amountDue" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountImposed" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountSatisfied" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountScheduled" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="byDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="conditionStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="conditionTypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="copay" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dateImposed" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="docketDefendantId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="imposedBy" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="locMonitorPgm" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="monitorMethod" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="nteTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="paymentStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="percentMeasure" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="percentPay" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="removedBy" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="schedulePeriod" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="statusDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="unitOfMeasure" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="amountDue" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountImposed" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountSatisfied" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountScheduled" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="byDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="copay" type="xs:string" minOccurs="0"/>
+          <xs:element name="dateImposed" type="xs:string" minOccurs="0"/>
+          <xs:element name="docketDefendantId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="imposedBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="locMonitorPgm" type="xs:string" minOccurs="0"/>
+          <xs:element name="monitorMethod" type="xs:string" minOccurs="0"/>
+          <xs:element name="nteTime" type="xs:string" minOccurs="0"/>
+          <xs:element name="paymentStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="percentMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="percentPay" type="xs:short" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="removedBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="schedulePeriod" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="unitOfMeasure" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="postConvictionDocket">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for postConvictionDocket complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="postConvictionDocket">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/docket}docketBase">
+&lt;sequence>
+&lt;element name="postConvictionDocketDefendants" type="{http://gov/usc/codex/pacts/postconviction}postConvictionDocketDefendantBasic" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="docket:docketBase">
+        <xs:sequence>
+          <xs:element name="postConvictionDocketDefendants" type="postconviction:postConvictionDocketDefendantBasic" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="postConvictionDocketDefendantBasic">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for postConvictionDocketDefendantBasic complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="postConvictionDocketDefendantBasic">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/docket}simpleDocketDefendantBase">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="client" type="{http://gov/usc/codex/pacts/client}simpleClient" minOccurs="0"/>
+&lt;element name="postConvictionClientInvestigations" type="{http://gov/usc/codex/pacts/postconviction}postConvictionClientInvestigation" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="docket:simpleDocketDefendantBase">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="client" type="client:simpleClient" minOccurs="0"/>
+          <xs:element name="postConvictionClientInvestigations" type="postconviction:postConvictionClientInvestigation" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="postConvictionInvestigation">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for postConvictionInvestigation complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="postConvictionInvestigation">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/investigation}investigation">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="docketDefendantId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="investType" type="{http://gov/usc/codex/pacts/reftype}investType" minOccurs="0"/>
+&lt;element name="investTypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="investigation:investigation">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="docketDefendantId" type="xs:string" minOccurs="0"/>
+          <xs:element name="investType" type="reftype:investType" minOccurs="0"/>
+          <xs:element name="investTypeId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="postConvictionSupervision">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for postConvictionSupervision complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="postConvictionSupervision">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/postconviction}postConvictionSupervisionBase">
+&lt;sequence>
+&lt;element name="sentenceSupervision" type="{http://gov/usc/codex/pacts/postconviction}sentenceSupervisionBase" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="postconviction:postConvictionSupervisionBase">
+        <xs:sequence>
+          <xs:element name="sentenceSupervision" type="postconviction:sentenceSupervisionBase" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="postConvictionSupervisionBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for postConvictionSupervisionBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="postConvictionSupervisionBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="assignDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="begProfileId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="causeOfDeath" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="closeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="closeDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="criminalConductChargeTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="criminalConductDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="currentStatus" type="{http://gov/usc/codex/pacts/reftype}supvStatus" minOccurs="0"/>
+&lt;element name="currentStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docketDefendantId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="endProfileId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="episodeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="estimatedReleaseDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="expirationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="inactiveCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="initInactActDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="judge" type="{http://gov/usc/codex/pacts/district}judge" minOccurs="0"/>
+&lt;element name="judgeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="jurisTransFrom" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="jurisTransTo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officer" type="{http://gov/usc/codex/pacts/district}staff" minOccurs="0"/>
+&lt;element name="officerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="originalStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="presuperStartDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="prisnCurrentIncarcerated" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="receiveDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="revocationChargeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="revocationOff" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="revocationOffenseViolationTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="revocationType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="revocationViolationTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="rpiScore" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="skeletalSuper" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="superToFollow" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supervisionLevelId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="supervisionTypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supvTrFromDist" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supvTrFromOfc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supvTrToDist" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supvTrToOfc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="transInClient" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="transferInDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="assignDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="begProfileId" type="xs:string" minOccurs="0"/>
+          <xs:element name="causeOfDeath" type="xs:string" minOccurs="0"/>
+          <xs:element name="closeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="closeDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalConductChargeTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalConductDescription" type="xs:string" minOccurs="0"/>
+          <xs:element name="currentStatus" type="reftype:supvStatus" minOccurs="0"/>
+          <xs:element name="currentStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="docketDefendantId" type="xs:string" minOccurs="0"/>
+          <xs:element name="endProfileId" type="xs:string" minOccurs="0"/>
+          <xs:element name="episodeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="estimatedReleaseDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="expirationDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="inactiveCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="initInactActDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="judge" type="district:judge" minOccurs="0"/>
+          <xs:element name="judgeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="jurisTransFrom" type="xs:string" minOccurs="0"/>
+          <xs:element name="jurisTransTo" type="xs:string" minOccurs="0"/>
+          <xs:element name="officer" type="district:staff" minOccurs="0"/>
+          <xs:element name="officerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="originalStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="presuperStartDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="prisnCurrentIncarcerated" type="xs:string" minOccurs="0"/>
+          <xs:element name="receiveDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationChargeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationOff" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationOffenseViolationTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationType" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationViolationTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="rpiScore" type="xs:string" minOccurs="0"/>
+          <xs:element name="skeletalSuper" type="xs:string" minOccurs="0"/>
+          <xs:element name="superToFollow" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionLevelId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supvTrFromDist" type="xs:string" minOccurs="0"/>
+          <xs:element name="supvTrFromOfc" type="xs:string" minOccurs="0"/>
+          <xs:element name="supvTrToDist" type="xs:string" minOccurs="0"/>
+          <xs:element name="supvTrToOfc" type="xs:string" minOccurs="0"/>
+          <xs:element name="transInClient" type="xs:string" minOccurs="0"/>
+          <xs:element name="transferInDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="sentenceSupervision">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for sentenceSupervision complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="sentenceSupervision">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/postconviction}sentenceSupervisionBase">
+&lt;sequence>
+&lt;element name="supervision" type="{http://gov/usc/codex/pacts/postconviction}postConvictionSupervisionBase" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="postconviction:sentenceSupervisionBase">
+        <xs:sequence>
+          <xs:element name="supervision" type="postconviction:postConvictionSupervisionBase" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="sentenceSupervisionBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for sentenceSupervisionBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="sentenceSupervisionBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://gov/usc/codex/pacts/postconviction}sentenceSupervisionPK" minOccurs="0"/>
+&lt;element name="relationType" type="{http://gov/usc/codex/pacts/reftype}sentenceType" minOccurs="0"/>
+&lt;element name="relationTypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="sentence" type="{http://gov/usc/codex/pacts/docket}sentence" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="postconviction:sentenceSupervisionPK" minOccurs="0"/>
+          <xs:element name="relationType" type="reftype:sentenceType" minOccurs="0"/>
+          <xs:element name="relationTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="sentence" type="docket:sentence" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="sentenceSupervisionPK">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for sentenceSupervisionPK complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="sentenceSupervisionPK">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="sentence" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="supervision" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="sentence" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervision" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleDocketDefendantPostConviction">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleDocketDefendantPostConviction complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleDocketDefendantPostConviction">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/docket}simpleDocketDefendantBase">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="postConvictionSupervisions" type="{http://gov/usc/codex/pacts/postconviction}simplePostConvictionSupervision" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="docket:simpleDocketDefendantBase">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="postConvictionSupervisions" type="postconviction:simplePostConvictionSupervision" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simplePostConvictionCondition">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simplePostConvictionCondition complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simplePostConvictionCondition">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/postconviction}postConvictionConditionBase">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="postconviction:postConvictionConditionBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simplePostConvictionConditionAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simplePostConvictionConditionAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simplePostConvictionConditionAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/postconviction}postConvictionConditionBase">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="postconviction:postConvictionConditionBase">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simplePostConvictionSupervision">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simplePostConvictionSupervision complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simplePostConvictionSupervision">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="assignDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="begProfileId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="causeOfDeath" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="closeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="closeDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="criminalConductChargeTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="criminalConductDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="currentStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docketDefendantId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="endProfileId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="episodeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="expirationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="inactiveCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="initInactActDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="judgeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="jurisTransFrom" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="jurisTransTo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="originalStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="presuperStartDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="receiveDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="revocationChargeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="revocationOff" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="revocationOffenseViolationTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="revocationType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="revocationViolationTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="rpiScore" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="skeletalSuper" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="superToFollow" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supervisionLevelId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="supervisionTypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supvTrFromDist" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supvTrFromOfc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supvTrToDist" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supvTrToOfc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="transInClient" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="transferInDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="assignDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="begProfileId" type="xs:string" minOccurs="0"/>
+          <xs:element name="causeOfDeath" type="xs:string" minOccurs="0"/>
+          <xs:element name="closeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="closeDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalConductChargeTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalConductDescription" type="xs:string" minOccurs="0"/>
+          <xs:element name="currentStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="docketDefendantId" type="xs:string" minOccurs="0"/>
+          <xs:element name="endProfileId" type="xs:string" minOccurs="0"/>
+          <xs:element name="episodeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="expirationDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="inactiveCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="initInactActDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="judgeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="jurisTransFrom" type="xs:string" minOccurs="0"/>
+          <xs:element name="jurisTransTo" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="originalStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="presuperStartDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="receiveDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationChargeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationOff" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationOffenseViolationTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationType" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationViolationTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="rpiScore" type="xs:string" minOccurs="0"/>
+          <xs:element name="skeletalSuper" type="xs:string" minOccurs="0"/>
+          <xs:element name="superToFollow" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionLevelId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supvTrFromDist" type="xs:string" minOccurs="0"/>
+          <xs:element name="supvTrFromOfc" type="xs:string" minOccurs="0"/>
+          <xs:element name="supvTrToDist" type="xs:string" minOccurs="0"/>
+          <xs:element name="supvTrToOfc" type="xs:string" minOccurs="0"/>
+          <xs:element name="transInClient" type="xs:string" minOccurs="0"/>
+          <xs:element name="transferInDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

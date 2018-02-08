@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/drugtest" xmlns:core="http://gov/usc/codex/core" xmlns:drugtest="http://gov/usc/codex/pacts/drugtest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:complexType name="drugTest">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for drugTest complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="drugTest">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="collectDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="dateNtlReceived" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="dateNtlReturned" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="localSpecimen" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="ntlSpecimen" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="siteId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="respOfficer" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="probPts" type="{http://gov/usc/codex/core}char" minOccurs="0"/>
+&lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="whereCollected" type="{http://gov/usc/codex/core}char" minOccurs="0"/>
+&lt;element name="bacLevel" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+&lt;element name="localDeviceId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="admissionCode" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="statusCode" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="testSite" type="{http://gov/usc/codex/pacts/drugtest}testSite" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="collectDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="dateNtlReceived" type="xs:string" minOccurs="0"/>
+          <xs:element name="dateNtlReturned" type="xs:string" minOccurs="0"/>
+          <xs:element name="localSpecimen" type="xs:string" minOccurs="0"/>
+          <xs:element name="ntlSpecimen" type="xs:string" minOccurs="0"/>
+          <xs:element name="siteId" type="xs:string" minOccurs="0"/>
+          <xs:element name="respOfficer" type="xs:string" minOccurs="0"/>
+          <xs:element name="probPts" type="xs:string" minOccurs="0"/>
+          <xs:element name="comment" type="xs:string" minOccurs="0"/>
+          <xs:element name="whereCollected" type="xs:string" minOccurs="0"/>
+          <xs:element name="bacLevel" type="xs:double" minOccurs="0"/>
+          <xs:element name="localDeviceId" type="xs:string" minOccurs="0"/>
+          <xs:element name="admissionCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="testSite" type="drugtest:testSite" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="testSite">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for testSite complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="testSite">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="oldVendorId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="accountNo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="resultName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="resultAddress1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="resultAddress2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="resultCity" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="resultState" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="resultZipCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="siteStatusCd" type="{http://gov/usc/codex/core}char" minOccurs="0"/>
+&lt;element name="defProbPts" type="{http://gov/usc/codex/core}char" minOccurs="0"/>
+&lt;element name="catchmentArea" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="prvdrLocationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldVendorId" type="xs:string" minOccurs="0"/>
+          <xs:element name="accountNo" type="xs:string" minOccurs="0"/>
+          <xs:element name="fax" type="xs:string" minOccurs="0"/>
+          <xs:element name="resultName" type="xs:string" minOccurs="0"/>
+          <xs:element name="resultAddress1" type="xs:string" minOccurs="0"/>
+          <xs:element name="resultAddress2" type="xs:string" minOccurs="0"/>
+          <xs:element name="resultCity" type="xs:string" minOccurs="0"/>
+          <xs:element name="resultState" type="xs:string" minOccurs="0"/>
+          <xs:element name="resultZipCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="siteStatusCd" type="xs:string" minOccurs="0"/>
+          <xs:element name="defProbPts" type="xs:string" minOccurs="0"/>
+          <xs:element name="catchmentArea" type="xs:string" minOccurs="0"/>
+          <xs:element name="prvdrLocationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

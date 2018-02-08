@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/address" xmlns:core="http://gov/usc/codex/core" xmlns:address="http://gov/usc/codex/pacts/address" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:complexType name="address">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for address complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="address">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/address}geoAddress">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="address:geoAddress"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="baseAddress">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for baseAddress complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="baseAddress">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="address1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="address2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="city" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="stateId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="zipCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="address1" type="xs:string" minOccurs="0"/>
+          <xs:element name="address2" type="xs:string" minOccurs="0"/>
+          <xs:element name="city" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="stateId" type="xs:string" minOccurs="0"/>
+          <xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="geoAddress">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for geoAddress complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="geoAddress">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/address}baseAddress">
+&lt;sequence>
+&lt;element name="countyId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="latitude" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="longitude" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="address:baseAddress">
+        <xs:sequence>
+          <xs:element name="countyId" type="xs:string" minOccurs="0"/>
+          <xs:element name="latitude" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="longitude" type="xs:decimal" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

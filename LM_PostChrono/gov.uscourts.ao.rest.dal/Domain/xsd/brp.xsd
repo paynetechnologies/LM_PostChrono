@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/brp" xmlns:client="http://gov/usc/codex/pacts/client" xmlns:core="http://gov/usc/codex/core" xmlns:reftype="http://gov/usc/codex/pacts/reftype" xmlns:brp="http://gov/usc/codex/pacts/brp" xmlns:district="http://gov/usc/codex/pacts/district" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/pacts/client" schemaLocation="client.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/reftype" schemaLocation="reftype.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/district" schemaLocation="district.xsd"/>
+  <xs:complexType name="brp">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for brp complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="brp">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="arrestDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="brpDocketDefendants" type="{http://gov/usc/codex/pacts/brp}brpDocketDefendant" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="districtCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="interviewDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="interviewOfficerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="isInterviewed" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;element name="isRuleFive" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;element name="judicialOfficer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officeNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="reportType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="reviewingOfficerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="rptApprovedOn" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+&lt;element name="rptSubmittedOn" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+&lt;element name="ruleFiveDistrict" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="useMilitaryTime" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="arrestDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="brpDocketDefendants" type="brp:brpDocketDefendant" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="districtCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="interviewDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="interviewOfficerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="isInterviewed" type="xs:string" minOccurs="0"/>
+          <xs:element name="isRuleFive" type="xs:string" minOccurs="0"/>
+          <xs:element name="judicialOfficer" type="xs:string" minOccurs="0"/>
+          <xs:element name="officeNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="reportType" type="xs:string" minOccurs="0"/>
+          <xs:element name="reviewingOfficerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="rptApprovedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="rptSubmittedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="ruleFiveDistrict" type="xs:string" minOccurs="0"/>
+          <xs:element name="useMilitaryTime" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="brpDocketDefendant">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for brpDocketDefendant complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="brpDocketDefendant">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="bailReportId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="docketDefendantId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="isPrimary" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="bailReportId" type="xs:string" minOccurs="0"/>
+          <xs:element name="docketDefendantId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="isPrimary" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="clientBrp">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for clientBrp complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="clientBrp">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/client}clientBase">
+&lt;sequence>
+&lt;element name="bailReports" type="{http://gov/usc/codex/pacts/brp}brp" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="client:clientBase">
+        <xs:sequence>
+          <xs:element name="bailReports" type="brp:brp" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

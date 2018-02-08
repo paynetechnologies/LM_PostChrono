@@ -1,0 +1,47 @@
+C:\Projects\TestApps\REST\RestTest\ChronoService\bin\Debug\ChronoService.dll
+C:\Projects\TestApps\REST\RestTest\ChronoService\bin\Debug\ChronoService.pdb
+C:\Projects\TestApps\REST\RestTest\ChronoService\bin\Debug\log4net.dll
+C:\Projects\TestApps\REST\RestTest\ChronoService\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\TestApps\REST\RestTest\ChronoService\bin\Debug\RestSharp.dll
+C:\Projects\TestApps\REST\RestTest\ChronoService\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\TestApps\REST\RestTest\ChronoService\bin\Debug\RestSharp.xml
+C:\Projects\TestApps\REST\RestTest\ChronoService\obj\Debug\ChronoService.dll
+C:\Projects\TestApps\REST\RestTest\ChronoService\obj\Debug\ChronoService.pdb
+C:\Projects\TestApps\REST\RestTest\ChronoService\obj\Debug\ChronoService.csprojResolveAssemblyReference.cache
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\ChronoService.dll.config
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\ChronoService.dll
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\ChronoService.pdb
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\EntityFramework.dll
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\log4net.dll
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\RestSharp.dll
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\EntityFramework.xml
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\RestSharp.xml
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\obj\Debug\ChronoService.dll
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\obj\Debug\ChronoService.pdb
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\obj\Debug\ChronoService.csprojResolveAssemblyReference.cache
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\gov.uscourts.ao.pacts.rest.dll
+C:\Users\payneh\Documents\AAA Project Work\ERS\ERSDEMO-3423 - TUS - Database logging of failed Chrono\RestTest\ChronoService\bin\Debug\gov.uscourts.ao.pacts.rest.pdb
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\ChronoService.dll.config
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\ChronoService.dll
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\ChronoService.pdb
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\EntityFramework.dll
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\gov.uscourts.ao.rest.pacts.dll
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\gov.uscourts.ao.sts.rest.dll
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\log4net.dll
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\RestSharp.dll
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\gov.uscourts.ao.rest.pacts.pdb
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\gov.uscourts.ao.sts.rest.pdb
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\EntityFramework.xml
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\log4net.xml
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\bin\Debug\RestSharp.xml
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\obj\Debug\ChronoService.csprojResolveAssemblyReference.cache
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\obj\Debug\ChronoService.dll
+C:\Projects\O&M\ERSDEMO-2217\ERSDEMO-2217\ChronoService\obj\Debug\ChronoService.pdb

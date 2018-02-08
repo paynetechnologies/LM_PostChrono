@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/criminalhistory" xmlns:criminalhistory="http://gov/usc/codex/pacts/criminalhistory" xmlns:core="http://gov/usc/codex/core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:complexType name="criminalHistoryCharges">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for criminalHistoryCharges complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="criminalHistoryCharges">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="criminalHistoryDetailsId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalHistoryDetailsId" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="criminalHistoryDetails">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for criminalHistoryDetails complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="criminalHistoryDetails">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="criminalHistoryTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="arrestDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="oldChargesConvictions" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="oldStateLocalDocketNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="circuitDistrict" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="oldFederalDocketNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="oldDefendantNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="sentenceDispositionDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="keepDispositionStatusId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="oldDispositionNarrative" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="offenseLevel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="offenseClassification" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="oldCircumstancesNarrative" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="probationParoleHistory" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;element name="supervisionViolations" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;element name="explainViolations" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="middleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="generation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="agencyOffice" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="addressId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="cellPhone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="criminalHistoryPoints" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="representedByCounsel" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="agency" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="agencyCity" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="agencyState" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="court" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="courtCity" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="courtState" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="bailReportDispositionNarrative" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="psrDispositionNarrative" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="excludeFromPsr" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;element name="bailReportCircumstancesNarrative" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="psrCircumstancesNarrative" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docketNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="jurisdictionType" type="{http://gov/usc/codex/core}char" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalHistoryTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="arrestDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldChargesConvictions" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldStateLocalDocketNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="circuitDistrict" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldFederalDocketNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldDefendantNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="sentenceDispositionDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="keepDispositionStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldDispositionNarrative" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseLevel" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseClassification" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldCircumstancesNarrative" type="xs:string" minOccurs="0"/>
+          <xs:element name="probationParoleHistory" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionViolations" type="xs:string" minOccurs="0"/>
+          <xs:element name="explainViolations" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="generation" type="xs:string" minOccurs="0"/>
+          <xs:element name="agencyOffice" type="xs:string" minOccurs="0"/>
+          <xs:element name="addressId" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0"/>
+          <xs:element name="cellPhone" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalHistoryPoints" type="xs:string" minOccurs="0"/>
+          <xs:element name="representedByCounsel" type="xs:string" minOccurs="0"/>
+          <xs:element name="agency" type="xs:string" minOccurs="0"/>
+          <xs:element name="agencyCity" type="xs:string" minOccurs="0"/>
+          <xs:element name="agencyState" type="xs:string" minOccurs="0"/>
+          <xs:element name="court" type="xs:string" minOccurs="0"/>
+          <xs:element name="courtCity" type="xs:string" minOccurs="0"/>
+          <xs:element name="courtState" type="xs:string" minOccurs="0"/>
+          <xs:element name="bailReportDispositionNarrative" type="xs:string" minOccurs="0"/>
+          <xs:element name="psrDispositionNarrative" type="xs:string" minOccurs="0"/>
+          <xs:element name="excludeFromPsr" type="xs:string" minOccurs="0"/>
+          <xs:element name="bailReportCircumstancesNarrative" type="xs:string" minOccurs="0"/>
+          <xs:element name="psrCircumstancesNarrative" type="xs:string" minOccurs="0"/>
+          <xs:element name="docketNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="jurisdictionType" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="criminalHistoryType">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for criminalHistoryType complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="criminalHistoryType">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="sortOrder" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="sortOrder" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/assignment" xmlns:core="http://gov/usc/codex/core" xmlns:assignment="http://gov/usc/codex/pacts/assignment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:complexType name="officerClient">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for officerClient complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="officerClient">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="middleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="gender" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officerFirstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officerLastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="staffId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="imageUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="lastAssessmentDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="lcdId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="planDueDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="gender" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerFirstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerLastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffId" type="xs:string" minOccurs="0"/>
+          <xs:element name="imageUrl" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastAssessmentDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="lcdId" type="xs:string" minOccurs="0"/>
+          <xs:element name="planDueDate" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="officerClientAssignment">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for officerClientAssignment complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="officerClientAssignment">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="caseDefendantId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
+&lt;element name="receiveDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+&lt;element name="middleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+&lt;element name="generation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officerFirstName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+&lt;element name="officerLastName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+&lt;element name="staffId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+&lt;element name="probPts" type="{http://www.w3.org/2001/XMLSchema}string"/>
+&lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="reportsTo" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="supervisionExpirationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="supervisionCurrentStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="psupervisionBeginDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="intakeType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="investType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="caseDefendantId" type="xs:string" minOccurs="1"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="1"/>
+          <xs:element name="receiveDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="1"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="1"/>
+          <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="1"/>
+          <xs:element name="generation" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerFirstName" type="xs:string" minOccurs="1"/>
+          <xs:element name="officerLastName" type="xs:string" minOccurs="1"/>
+          <xs:element name="staffId" type="xs:string" minOccurs="1"/>
+          <xs:element name="probPts" type="xs:string" minOccurs="1"/>
+          <xs:element name="email" type="xs:string" minOccurs="0"/>
+          <xs:element name="reportsTo" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionExpirationDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionCurrentStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="psupervisionBeginDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="intakeType" type="xs:string" minOccurs="0"/>
+          <xs:element name="investType" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChronoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Chrono">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="attempted" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="authorCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="chronosNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="chronosStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clientId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="confidential" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="contactDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="contactTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="noncompliance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="planChange" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="probPts" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="respNoncompliance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="thirdPartyRisk" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createdOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createdBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="updatedOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ChronosCategoryCode">
+    <Key>
+      <PropertyRef Name="ChronosCategoryCodeId" />
+    </Key>
+    <Property Name="ChronosCategoryCodeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contactCatCd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="nationalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sortValue" Type="Int16" Nullable="false" />
+    <Property Name="createdOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="createdBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="contactCategory_id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ContactCategory" Relationship="Self.FK_dbo_ChronosCategoryCode_dbo_ContactCategory_contactCategory_id" FromRole="ChronosCategoryCode" ToRole="ContactCategory" />
+    <NavigationProperty Name="ChronosContactCodes" Relationship="Self.FK_dbo_ChronosContactCode_dbo_ChronosCategoryCode_chronosCategoryCode_ChronosCategoryCodeId" FromRole="ChronosCategoryCode" ToRole="ChronosContactCode" />
+    <NavigationProperty Name="ContactCategories" Relationship="Self.FK_dbo_ContactCategory_dbo_ChronosCategoryCode_chronosCatCd_ChronosCategoryCodeId" FromRole="ChronosCategoryCode" ToRole="ContactCategory" />
+    <NavigationProperty Name="ContactCategories1" Relationship="Self.FK_dbo_ContactCategory_dbo_ChronosCategoryCode_chronosCategoryCode_ChronosCategoryCodeId" FromRole="ChronosCategoryCode" ToRole="ContactCategory" />
+  </EntityType>
+  <EntityType Name="ChronosContact">
+    <Key>
+      <PropertyRef Name="ChronosContactID" />
+    </Key>
+    <Property Name="ChronosContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="createdOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="createdBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="chronosContactCode_chronosContactCodePKId" Type="Int32" />
+    <Property Name="chronosContactCodePKId_ChronosContactCodePKID" Type="Int32" />
+    <Property Name="id_ChronosContactPKID" Type="Int32" />
+    <NavigationProperty Name="ChronosContactCode" Relationship="Self.FK_dbo_ChronosContact_dbo_ChronosContactCode_chronosContactCode_chronosContactCodePKId" FromRole="ChronosContact" ToRole="ChronosContactCode" />
+    <NavigationProperty Name="ChronosContactCodePK" Relationship="Self.FK_dbo_ChronosContact_dbo_ChronosContactCodePK_chronosContactCodePKId_ChronosContactCodePKID" FromRole="ChronosContact" ToRole="ChronosContactCodePK" />
+    <NavigationProperty Name="ChronosContactPK" Relationship="Self.FK_dbo_ChronosContact_dbo_ChronosContactPK_id_ChronosContactPKID" FromRole="ChronosContact" ToRole="ChronosContactPK" />
+  </EntityType>
+  <EntityType Name="ChronosContactCode">
+    <Key>
+      <PropertyRef Name="chronosContactCodePKId" />
+    </Key>
+    <Property Name="chronosContactCodePKId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="active" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="alwaysShow" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="probPts" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="createdOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="createdBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="chronosCategoryCode_ChronosCategoryCodeId" Type="Int32" />
+    <Property Name="chronosContactCodePKID_ChronosContactCodePKID" Type="Int32" />
+    <NavigationProperty Name="ChronosCategoryCode" Relationship="Self.FK_dbo_ChronosContactCode_dbo_ChronosCategoryCode_chronosCategoryCode_ChronosCategoryCodeId" FromRole="ChronosContactCode" ToRole="ChronosCategoryCode" />
+    <NavigationProperty Name="ChronosContacts" Relationship="Self.FK_dbo_ChronosContact_dbo_ChronosContactCode_chronosContactCode_chronosContactCodePKId" FromRole="ChronosContactCode" ToRole="ChronosContact" />
+    <NavigationProperty Name="ChronosContactCodePK" Relationship="Self.FK_dbo_ChronosContactCode_dbo_ChronosContactCodePK_chronosContactCodePKID_ChronosContactCodePKID" FromRole="ChronosContactCode" ToRole="ChronosContactCodePK" />
+  </EntityType>
+  <EntityType Name="ChronosContactCodePK">
+    <Key>
+      <PropertyRef Name="ChronosContactCodePKID" />
+    </Key>
+    <Property Name="ChronosContactCodePKID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chronosCategoryCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="probPts" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="createdOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="createdBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChronosContacts" Relationship="Self.FK_dbo_ChronosContact_dbo_ChronosContactCodePK_chronosContactCodePKId_ChronosContactCodePKID" FromRole="ChronosContactCodePK" ToRole="ChronosContact" />
+    <NavigationProperty Name="ChronosContactCodes" Relationship="Self.FK_dbo_ChronosContactCode_dbo_ChronosContactCodePK_chronosContactCodePKID_ChronosContactCodePKID" FromRole="ChronosContactCodePK" ToRole="ChronosContactCode" />
+  </EntityType>
+  <EntityType Name="ChronosContactPK">
+    <Key>
+      <PropertyRef Name="ChronosContactPKID" />
+    </Key>
+    <Property Name="ChronosContactPKID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chronos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="chronosCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="probPts" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ChronosContacts" Relationship="Self.FK_dbo_ChronosContact_dbo_ChronosContactPK_id_ChronosContactPKID" FromRole="ChronosContactPK" ToRole="ChronosContact" />
+  </EntityType>
+  <EntityType Name="ContactCategory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContactCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="active" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sortValue" Type="Int16" Nullable="false" />
+    <Property Name="createdOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="createdBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedOn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="chronosCatCd_ChronosCategoryCodeId" Type="Int32" />
+    <Property Name="chronosCategoryCode_ChronosCategoryCodeId" Type="Int32" />
+    <NavigationProperty Name="ChronosCategoryCodes" Relationship="Self.FK_dbo_ChronosCategoryCode_dbo_ContactCategory_contactCategory_id" FromRole="ContactCategory" ToRole="ChronosCategoryCode" />
+    <NavigationProperty Name="ChronosCategoryCode" Relationship="Self.FK_dbo_ContactCategory_dbo_ChronosCategoryCode_chronosCatCd_ChronosCategoryCodeId" FromRole="ContactCategory" ToRole="ChronosCategoryCode" />
+    <NavigationProperty Name="ChronosCategoryCode1" Relationship="Self.FK_dbo_ContactCategory_dbo_ChronosCategoryCode_chronosCategoryCode_ChronosCategoryCodeId" FromRole="ContactCategory" ToRole="ChronosCategoryCode" />
+  </EntityType>
+  <Association Name="FK_dbo_ChronosCategoryCode_dbo_ContactCategory_contactCategory_id">
+    <End Role="ContactCategory" Type="Self.ContactCategory" Multiplicity="0..1" />
+    <End Role="ChronosCategoryCode" Type="Self.ChronosCategoryCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContactCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChronosCategoryCode">
+        <PropertyRef Name="contactCategory_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ChronosContactCode_dbo_ChronosCategoryCode_chronosCategoryCode_ChronosCategoryCodeId">
+    <End Role="ChronosCategoryCode" Type="Self.ChronosCategoryCode" Multiplicity="0..1" />
+    <End Role="ChronosContactCode" Type="Self.ChronosContactCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChronosCategoryCode">
+        <PropertyRef Name="ChronosCategoryCodeId" />
+      </Principal>
+      <Dependent Role="ChronosContactCode">
+        <PropertyRef Name="chronosCategoryCode_ChronosCategoryCodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ContactCategory_dbo_ChronosCategoryCode_chronosCatCd_ChronosCategoryCodeId">
+    <End Role="ChronosCategoryCode" Type="Self.ChronosCategoryCode" Multiplicity="0..1" />
+    <End Role="ContactCategory" Type="Self.ContactCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChronosCategoryCode">
+        <PropertyRef Name="ChronosCategoryCodeId" />
+      </Principal>
+      <Dependent Role="ContactCategory">
+        <PropertyRef Name="chronosCatCd_ChronosCategoryCodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ContactCategory_dbo_ChronosCategoryCode_chronosCategoryCode_ChronosCategoryCodeId">
+    <End Role="ChronosCategoryCode" Type="Self.ChronosCategoryCode" Multiplicity="0..1" />
+    <End Role="ContactCategory" Type="Self.ContactCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChronosCategoryCode">
+        <PropertyRef Name="ChronosCategoryCodeId" />
+      </Principal>
+      <Dependent Role="ContactCategory">
+        <PropertyRef Name="chronosCategoryCode_ChronosCategoryCodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ChronosContact_dbo_ChronosContactCode_chronosContactCode_chronosContactCodePKId">
+    <End Role="ChronosContactCode" Type="Self.ChronosContactCode" Multiplicity="0..1" />
+    <End Role="ChronosContact" Type="Self.ChronosContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChronosContactCode">
+        <PropertyRef Name="chronosContactCodePKId" />
+      </Principal>
+      <Dependent Role="ChronosContact">
+        <PropertyRef Name="chronosContactCode_chronosContactCodePKId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ChronosContact_dbo_ChronosContactCodePK_chronosContactCodePKId_ChronosContactCodePKID">
+    <End Role="ChronosContactCodePK" Type="Self.ChronosContactCodePK" Multiplicity="0..1" />
+    <End Role="ChronosContact" Type="Self.ChronosContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChronosContactCodePK">
+        <PropertyRef Name="ChronosContactCodePKID" />
+      </Principal>
+      <Dependent Role="ChronosContact">
+        <PropertyRef Name="chronosContactCodePKId_ChronosContactCodePKID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ChronosContact_dbo_ChronosContactPK_id_ChronosContactPKID">
+    <End Role="ChronosContactPK" Type="Self.ChronosContactPK" Multiplicity="0..1" />
+    <End Role="ChronosContact" Type="Self.ChronosContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChronosContactPK">
+        <PropertyRef Name="ChronosContactPKID" />
+      </Principal>
+      <Dependent Role="ChronosContact">
+        <PropertyRef Name="id_ChronosContactPKID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ChronosContactCode_dbo_ChronosContactCodePK_chronosContactCodePKID_ChronosContactCodePKID">
+    <End Role="ChronosContactCodePK" Type="Self.ChronosContactCodePK" Multiplicity="0..1" />
+    <End Role="ChronosContactCode" Type="Self.ChronosContactCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChronosContactCodePK">
+        <PropertyRef Name="ChronosContactCodePKID" />
+      </Principal>
+      <Dependent Role="ChronosContactCode">
+        <PropertyRef Name="chronosContactCodePKID_ChronosContactCodePKID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ChronoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="Chronoes" EntityType="Self.Chrono" />
+    <EntitySet Name="ChronosCategoryCodes" EntityType="Self.ChronosCategoryCode" />
+    <EntitySet Name="ChronosContacts" EntityType="Self.ChronosContact" />
+    <EntitySet Name="ChronosContactCodes" EntityType="Self.ChronosContactCode" />
+    <EntitySet Name="ChronosContactCodePKs" EntityType="Self.ChronosContactCodePK" />
+    <EntitySet Name="ChronosContactPKs" EntityType="Self.ChronosContactPK" />
+    <EntitySet Name="ContactCategories" EntityType="Self.ContactCategory" />
+    <AssociationSet Name="FK_dbo_ChronosCategoryCode_dbo_ContactCategory_contactCategory_id" Association="Self.FK_dbo_ChronosCategoryCode_dbo_ContactCategory_contactCategory_id">
+      <End Role="ContactCategory" EntitySet="ContactCategories" />
+      <End Role="ChronosCategoryCode" EntitySet="ChronosCategoryCodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ChronosContactCode_dbo_ChronosCategoryCode_chronosCategoryCode_ChronosCategoryCodeId" Association="Self.FK_dbo_ChronosContactCode_dbo_ChronosCategoryCode_chronosCategoryCode_ChronosCategoryCodeId">
+      <End Role="ChronosCategoryCode" EntitySet="ChronosCategoryCodes" />
+      <End Role="ChronosContactCode" EntitySet="ChronosContactCodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ContactCategory_dbo_ChronosCategoryCode_chronosCatCd_ChronosCategoryCodeId" Association="Self.FK_dbo_ContactCategory_dbo_ChronosCategoryCode_chronosCatCd_ChronosCategoryCodeId">
+      <End Role="ChronosCategoryCode" EntitySet="ChronosCategoryCodes" />
+      <End Role="ContactCategory" EntitySet="ContactCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ContactCategory_dbo_ChronosCategoryCode_chronosCategoryCode_ChronosCategoryCodeId" Association="Self.FK_dbo_ContactCategory_dbo_ChronosCategoryCode_chronosCategoryCode_ChronosCategoryCodeId">
+      <End Role="ChronosCategoryCode" EntitySet="ChronosCategoryCodes" />
+      <End Role="ContactCategory" EntitySet="ContactCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ChronosContact_dbo_ChronosContactCode_chronosContactCode_chronosContactCodePKId" Association="Self.FK_dbo_ChronosContact_dbo_ChronosContactCode_chronosContactCode_chronosContactCodePKId">
+      <End Role="ChronosContactCode" EntitySet="ChronosContactCodes" />
+      <End Role="ChronosContact" EntitySet="ChronosContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ChronosContact_dbo_ChronosContactCodePK_chronosContactCodePKId_ChronosContactCodePKID" Association="Self.FK_dbo_ChronosContact_dbo_ChronosContactCodePK_chronosContactCodePKId_ChronosContactCodePKID">
+      <End Role="ChronosContactCodePK" EntitySet="ChronosContactCodePKs" />
+      <End Role="ChronosContact" EntitySet="ChronosContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ChronosContact_dbo_ChronosContactPK_id_ChronosContactPKID" Association="Self.FK_dbo_ChronosContact_dbo_ChronosContactPK_id_ChronosContactPKID">
+      <End Role="ChronosContactPK" EntitySet="ChronosContactPKs" />
+      <End Role="ChronosContact" EntitySet="ChronosContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ChronosContactCode_dbo_ChronosContactCodePK_chronosContactCodePKID_ChronosContactCodePKID" Association="Self.FK_dbo_ChronosContactCode_dbo_ChronosContactCodePK_chronosContactCodePKID_ChronosContactCodePKID">
+      <End Role="ChronosContactCodePK" EntitySet="ChronosContactCodePKs" />
+      <End Role="ChronosContactCode" EntitySet="ChronosContactCodes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

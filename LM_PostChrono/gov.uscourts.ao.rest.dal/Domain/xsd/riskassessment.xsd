@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/ers/riskassessment" xmlns:riskassessment="http://gov/usc/codex/ers/riskassessment" xmlns:core="http://gov/usc/codex/core" xmlns:reftype="http://gov/usc/codex/pacts/reftype" xmlns:chronos="http://gov/usc/codex/pacts/chronos" xmlns:district="http://gov/usc/codex/pacts/district" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/reftype" schemaLocation="reftype.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/chronos" schemaLocation="chronos.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/district" schemaLocation="district.xsd"/>
+  <xs:complexType name="raClientLastDateAdministered">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="lcdId" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="dateAdministered" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raLanguageType">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="isoCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="raOffenderInputQuestions" type="riskassessment:raOffenderInputQuestion" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raOffenderAnswer">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="offenderAnswersID" type="xs:string" minOccurs="0"/>
+          <xs:element name="ccid" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdTimeStamp" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdByUserName" type="xs:string" minOccurs="0"/>
+          <xs:element name="profileValid" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedTimestamp" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedByUserName" type="xs:string" minOccurs="0"/>
+          <xs:element name="thinkingStyle1" type="xs:string" minOccurs="0"/>
+          <xs:element name="thinkingStyle2" type="xs:string" minOccurs="0"/>
+          <xs:element name="thinkingStyle3" type="xs:string" minOccurs="0"/>
+          <xs:element name="gct" type="xs:string" minOccurs="0"/>
+          <xs:element name="prdStyle" type="xs:string" minOccurs="0"/>
+          <xs:element name="proLvl" type="xs:string" minOccurs="0"/>
+          <xs:element name="reacLvl" type="xs:string" minOccurs="0"/>
+          <xs:element name="profileDiff" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raOffenderAssessment">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="lcdId" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffId" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="assessmentDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="planDueDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastAdministeredDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="raOffenderAnswers" type="xs:string" minOccurs="0"/>
+          <xs:element name="chronos" type="chronos:chronos" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusMessage" type="xs:string" minOccurs="0"/>
+          <xs:element name="raAclId" type="xs:string" minOccurs="0"/>
+          <xs:element name="isoCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raOffenderInputQuestion">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="item" type="xs:string" minOccurs="0"/>
+          <xs:element name="question" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raOfficer">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="accessControlId" type="xs:string" minOccurs="0"/>
+          <xs:element name="lcdId" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffId" type="xs:string" minOccurs="0"/>
+          <xs:element name="email" type="xs:string" minOccurs="0"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+          <xs:element name="pCExpirationDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="active" type="xs:string" minOccurs="0"/>
+          <xs:element name="agencyId" type="xs:string" minOccurs="0"/>
+          <xs:element name="ptExpirationDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="pactsLoginName" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisorId" type="xs:string" minOccurs="0"/>
+          <xs:element name="sirsTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="employeeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="roleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="permissionName" type="xs:string" minOccurs="0"/>
+          <xs:element name="districtCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPCRAAssessment">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="assessmentType" type="xs:string" minOccurs="0"/>
+          <xs:element name="ccid" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdTime" type="xs:string" minOccurs="0"/>
+          <xs:element name="dateAssessmentFinalized" type="xs:string" minOccurs="0"/>
+          <xs:element name="finalizingOfficer" type="xs:string" minOccurs="0"/>
+          <xs:element name="finalizingOfficerID" type="xs:string" minOccurs="0"/>
+          <xs:element name="nextReassessmentDueDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="nextScheduledReassessmentType" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenderName" type="xs:string" minOccurs="0"/>
+          <xs:element name="respFactorsFinalizingOfficerID" type="xs:string" minOccurs="0"/>
+          <xs:element name="riskLevel" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+          <xs:element name="raOffenderAnswer" type="riskassessment:raOffenderAnswer" minOccurs="0"/>
+          <xs:element name="raPcraOfficerAnswer" type="riskassessment:raPcraOfficerAnswer" minOccurs="0"/>
+          <xs:element name="raPcraSupervisionLevelRequest" type="riskassessment:raPCRASupervisionLevelRequest" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="raPcraAssessmentRespFactors" type="riskassessment:raPCRAAssessmentRespFactor" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="raPcraDynamicRiskFactor" type="riskassessment:raPCRADynamicRiskFactor" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="raPcraRiskCategory" type="riskassessment:raPCRARiskCategory" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPCRAAssessmentRespFactor">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="riskassessment:raPCRAAssessmentRespFactorPK" minOccurs="0"/>
+          <xs:element name="pcraRespFactorOtherDescription" type="xs:string" minOccurs="0"/>
+          <xs:element name="raPcraRespFactor" type="riskassessment:raPCRARespFactor" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPCRAAssessmentRespFactorPK">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="pcraAssessmentID" type="xs:string" minOccurs="0"/>
+          <xs:element name="pcraRespFactorId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPCRADynamicRiskFactor">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="pcraRynamicRiskFactorId" type="xs:string" minOccurs="0"/>
+          <xs:element name="dynamicRiskFactor1" type="xs:string" minOccurs="0"/>
+          <xs:element name="dynamicRiskFactor2" type="xs:string" minOccurs="0"/>
+          <xs:element name="dynamicRiskFactor3" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPCRARespFactor">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="pcraRespFactorId" type="xs:string" minOccurs="0"/>
+          <xs:element name="pcraRespFactorTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="pcraRespFactorDesc" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPCRARiskCategory">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="pcraRiskCategoryId" type="xs:string" minOccurs="0"/>
+          <xs:element name="raRiskCategoryLookup" type="riskassessment:raRiskCategoryLookup" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPCRASupervisionLevel">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="supervisionLevelId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionLevel" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPCRASupervisionLevelRequest">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="requestID" type="xs:string" minOccurs="0"/>
+          <xs:element name="requestAccessControlID" type="xs:string" minOccurs="0"/>
+          <xs:element name="requestDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="requestReason" type="xs:string" minOccurs="0"/>
+          <xs:element name="responseAccessControlID" type="xs:string" minOccurs="0"/>
+          <xs:element name="responseDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="responseReason" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+          <xs:element name="raPcraSupervisionLevel" type="riskassessment:raPCRASupervisionLevel" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPTRAAssessmentType">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="assessmentTypeID" type="xs:string" minOccurs="0"/>
+          <xs:element name="assessmentType" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPTRAOfficerAnswer">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="pTRAOfficerAnswersID" type="xs:string" minOccurs="0"/>
+          <xs:element name="answers" type="xs:string" minOccurs="0"/>
+          <xs:element name="ccid" type="xs:string" minOccurs="0"/>
+          <xs:element name="citizen" type="xs:string" minOccurs="0"/>
+          <xs:element name="country" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdTimeStamp" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdByUserName" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalHistoryTotal" type="xs:string" minOccurs="0"/>
+          <xs:element name="dateAssessed" type="xs:string" minOccurs="0"/>
+          <xs:element name="empStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="foreignTies" type="xs:string" minOccurs="0"/>
+          <xs:element name="interviewStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="othersTotal" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+          <xs:element name="travelStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedTimestamp" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedByUserName" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalScore" type="xs:string" minOccurs="0"/>
+          <xs:element name="raPtrascoresLookup" type="riskassessment:raPTRAScoresLookup" minOccurs="0"/>
+          <xs:element name="raPtraAssessmentType" type="riskassessment:raPTRAAssessmentType" minOccurs="0"/>
+          <xs:element name="raPtraReleaseRecommendation" type="riskassessment:raPTRAReleaseRecommendation" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPTRAReleaseRecommendation">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="releaseRecommendationID" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerACLID" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerName" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherDesc" type="xs:string" minOccurs="0"/>
+          <xs:element name="riskCategory" type="xs:string" minOccurs="0"/>
+          <xs:element name="releaseRecommendationCategoryID" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPTRARiskCategory">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="ptraId" type="xs:string" minOccurs="0"/>
+          <xs:element name="ptraAssessmentId" type="xs:string" minOccurs="1"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="1"/>
+          <xs:element name="riskCategory" type="xs:string" minOccurs="1"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPTRAScoresLookup">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="fta" type="xs:string" minOccurs="0"/>
+          <xs:element name="ftaNca" type="xs:string" minOccurs="0"/>
+          <xs:element name="ftaNcaTv" type="xs:string" minOccurs="0"/>
+          <xs:element name="nca" type="xs:string" minOccurs="0"/>
+          <xs:element name="percentage" type="xs:string" minOccurs="0"/>
+          <xs:element name="riskCategory" type="xs:string" minOccurs="0"/>
+          <xs:element name="riskScore" type="xs:string" minOccurs="0"/>
+          <xs:element name="tv" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raPcraOfficerAnswer">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="pcraOfficerAnswersId" type="xs:string" minOccurs="0"/>
+          <xs:element name="answers" type="xs:string" minOccurs="0"/>
+          <xs:element name="ccid" type="xs:string" minOccurs="0"/>
+          <xs:element name="cognitionsTotal" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdTimeStamp" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdByUserName" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalHistoryTotal" type="xs:string" minOccurs="0"/>
+          <xs:element name="dateAssessed" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugsAlcoholTotal" type="xs:string" minOccurs="0"/>
+          <xs:element name="educationEmploymentTotal" type="xs:string" minOccurs="0"/>
+          <xs:element name="othersTotal" type="xs:string" minOccurs="0"/>
+          <xs:element name="socialNetworksTotal" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalScore" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedTimestamp" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedByUserName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="raRiskCategoryLookup">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="riskCategoryID" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="endDay" type="xs:string" minOccurs="0"/>
+          <xs:element name="riskLevel" type="xs:string" minOccurs="0"/>
+          <xs:element name="startDay" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

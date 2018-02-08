@@ -1,0 +1,8 @@
+C:\Users\payneh\Documents\AAA Jira\ERS\ERSDEMO-3423 log failed Chrono\ERSDEMO-3423 Project\gov.uscourts.ao.bll.ers\bin\Debug\gov.uscourts.ao.bll.dll
+C:\Users\payneh\Documents\AAA Jira\ERS\ERSDEMO-3423 log failed Chrono\ERSDEMO-3423 Project\gov.uscourts.ao.bll.ers\bin\Debug\gov.uscourts.ao.bll.pdb
+C:\Users\payneh\Documents\AAA Jira\ERS\ERSDEMO-3423 log failed Chrono\ERSDEMO-3423 Project\gov.uscourts.ao.bll.ers\obj\Debug\gov.uscourts.ao.bll.dll
+C:\Users\payneh\Documents\AAA Jira\ERS\ERSDEMO-3423 log failed Chrono\ERSDEMO-3423 Project\gov.uscourts.ao.bll.ers\obj\Debug\gov.uscourts.ao.bll.pdb
+C:\Users\payneh\Documents\AAA Jira\ERS\ERSDEMO-3423 log failed Chrono\ERSDEMO-3423 Project\gov.uscourts.ao.rest.bll\bin\Debug\gov.uscourts.ao.rest.bll.dll
+C:\Users\payneh\Documents\AAA Jira\ERS\ERSDEMO-3423 log failed Chrono\ERSDEMO-3423 Project\gov.uscourts.ao.rest.bll\bin\Debug\gov.uscourts.ao.rest.bll.pdb
+C:\Users\payneh\Documents\AAA Jira\ERS\ERSDEMO-3423 log failed Chrono\ERSDEMO-3423 Project\gov.uscourts.ao.rest.bll\obj\Debug\gov.uscourts.ao.rest.bll.dll
+C:\Users\payneh\Documents\AAA Jira\ERS\ERSDEMO-3423 log failed Chrono\ERSDEMO-3423 Project\gov.uscourts.ao.rest.bll\obj\Debug\gov.uscourts.ao.rest.bll.pdb

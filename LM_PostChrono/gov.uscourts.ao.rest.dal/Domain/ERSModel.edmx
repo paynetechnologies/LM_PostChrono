@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ersModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClientAssign">
+          <Key>
+            <PropertyRef Name="AssignNum" />
+          </Key>
+          <Property Name="AssignNum" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CCID" Type="nvarchar" MaxLength="50" />
+          <Property Name="CSID" Type="nvarchar" MaxLength="10" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="StaffName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PactsType" Type="nvarchar" MaxLength="1" />
+          <Property Name="QuestionSetID" Type="int" />
+          <Property Name="office_location" Type="nvarchar" MaxLength="50" />
+          <Property Name="Schedule" Type="nvarchar" MaxLength="50" />
+          <Property Name="Venue" Type="nvarchar" MaxLength="10" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="DateRegistered" Type="datetime" Nullable="false" />
+          <Property Name="RegisteredBy" Type="nvarchar" MaxLength="10" />
+          <Property Name="DateModified" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="10" />
+          <Property Name="Enrolled" Type="bit" />
+          <Property Name="DateEnrolled" Type="datetime" />
+          <Property Name="EnrolledBy" Type="nvarchar" MaxLength="10" />
+          <Property Name="DateDeactivated" Type="datetime" />
+          <Property Name="DeactivatedBy" Type="nvarchar" MaxLength="10" />
+          <Property Name="PACTS_Closed" Type="bit" />
+          <Property Name="ScheduleID" Type="int" />
+        </EntityType>
+        <Association Name="FK_ClientAssign_ClientAssign">
+          <End Role="ClientAssign" Type="Self.ClientAssign" Multiplicity="1" />
+          <End Role="ClientAssign1" Type="Self.ClientAssign" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="ClientAssign">
+              <PropertyRef Name="AssignNum" />
+            </Principal>
+            <Dependent Role="ClientAssign1">
+              <PropertyRef Name="AssignNum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ersModelStoreContainer">
+          <EntitySet Name="ClientAssign" EntityType="Self.ClientAssign" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ClientAssign_ClientAssign" Association="Self.FK_ClientAssign_ClientAssign">
+            <End Role="ClientAssign" EntitySet="ClientAssign" />
+            <End Role="ClientAssign1" EntitySet="ClientAssign" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClientAssign">
+          <Key>
+            <PropertyRef Name="AssignNum" />
+          </Key>
+          <Property Name="AssignNum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CCID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CSID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StaffName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PactsType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="QuestionSetID" Type="Int32" />
+          <Property Name="office_location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Schedule" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Venue" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="DateRegistered" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RegisteredBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DateModified" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Enrolled" Type="Boolean" />
+          <Property Name="DateEnrolled" Type="DateTime" Precision="3" />
+          <Property Name="EnrolledBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DateDeactivated" Type="DateTime" Precision="3" />
+          <Property Name="DeactivatedBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PACTS_Closed" Type="Boolean" />
+          <Property Name="ScheduleID" Type="Int32" />
+          </EntityType>
+        <EntityContainer Name="ersEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClientAssign" EntityType="Self.ClientAssign" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ersModelStoreContainer" CdmEntityContainer="ersEntities">
+          <EntitySetMapping Name="ClientAssign">
+            <EntityTypeMapping TypeName="ersModel.ClientAssign">
+              <MappingFragment StoreEntitySet="ClientAssign">
+                <ScalarProperty Name="AssignNum" ColumnName="AssignNum" />
+                <ScalarProperty Name="CCID" ColumnName="CCID" />
+                <ScalarProperty Name="CSID" ColumnName="CSID" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+                <ScalarProperty Name="PactsType" ColumnName="PactsType" />
+                <ScalarProperty Name="QuestionSetID" ColumnName="QuestionSetID" />
+                <ScalarProperty Name="office_location" ColumnName="office_location" />
+                <ScalarProperty Name="Schedule" ColumnName="Schedule" />
+                <ScalarProperty Name="Venue" ColumnName="Venue" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="DateRegistered" ColumnName="DateRegistered" />
+                <ScalarProperty Name="RegisteredBy" ColumnName="RegisteredBy" />
+                <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Enrolled" ColumnName="Enrolled" />
+                <ScalarProperty Name="DateEnrolled" ColumnName="DateEnrolled" />
+                <ScalarProperty Name="EnrolledBy" ColumnName="EnrolledBy" />
+                <ScalarProperty Name="DateDeactivated" ColumnName="DateDeactivated" />
+                <ScalarProperty Name="DeactivatedBy" ColumnName="DeactivatedBy" />
+                <ScalarProperty Name="PACTS_Closed" ColumnName="PACTS_Closed" />
+                <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,20 @@
+C:\Projects\Misc\Other Stuff\RestTest\RestTest.ConsoleApp\bin\Debug\RestTest.ConsoleApp.exe.config
+C:\Projects\Misc\Other Stuff\RestTest\RestTest.ConsoleApp\bin\Debug\RestTest.ConsoleApp.exe
+C:\Projects\Misc\Other Stuff\RestTest\RestTest.ConsoleApp\bin\Debug\RestTest.ConsoleApp.pdb
+C:\Projects\Misc\Other Stuff\RestTest\RestTest.ConsoleApp\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Misc\Other Stuff\RestTest\RestTest.ConsoleApp\bin\Debug\RestSharp.dll
+C:\Projects\Misc\Other Stuff\RestTest\RestTest.ConsoleApp\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Misc\Other Stuff\RestTest\RestTest.ConsoleApp\bin\Debug\RestSharp.xml
+C:\Projects\Misc\Other Stuff\RestTest\RestTest.ConsoleApp\obj\Debug\RestTest.ConsoleApp.exe
+C:\Projects\Misc\Other Stuff\RestTest\RestTest.ConsoleApp\obj\Debug\RestTest.ConsoleApp.pdb
+C:\Projects\Misc\Other Stuff\RestTest\RestTest.ConsoleApp\obj\Debug\RestTest.ConsoleApp.csprojResolveAssemblyReference.cache
+C:\Projects\Docs\REST\RestTest\RestTest.ConsoleApp\bin\Debug\RestTest.ConsoleApp.exe.config
+C:\Projects\Docs\REST\RestTest\RestTest.ConsoleApp\obj\Debug\RestTest.ConsoleApp.exe
+C:\Projects\Docs\REST\RestTest\RestTest.ConsoleApp\obj\Debug\RestTest.ConsoleApp.pdb
+C:\Projects\Docs\REST\RestTest\RestTest.ConsoleApp\bin\Debug\RestTest.ConsoleApp.exe
+C:\Projects\Docs\REST\RestTest\RestTest.ConsoleApp\bin\Debug\RestTest.ConsoleApp.pdb
+C:\Projects\Docs\REST\RestTest\RestTest.ConsoleApp\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Docs\REST\RestTest\RestTest.ConsoleApp\bin\Debug\RestSharp.dll
+C:\Projects\Docs\REST\RestTest\RestTest.ConsoleApp\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Docs\REST\RestTest\RestTest.ConsoleApp\bin\Debug\RestSharp.xml
+C:\Projects\Docs\REST\RestTest\RestTest.ConsoleApp\obj\Debug\RestTest.ConsoleApp.csprojResolveAssemblyReference.cache

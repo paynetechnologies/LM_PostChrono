@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ChronoModelStoreContainer" CdmEntityContainer="ChronoEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="ChronoModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chronoes">
+      <EntityTypeMapping TypeName="ChronoModel.Chrono">
+        <MappingFragment StoreEntitySet="Chrono">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="attempted" ColumnName="attempted" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="authorCode" ColumnName="authorCode" />
+          <ScalarProperty Name="chronosNotes" ColumnName="chronosNotes" />
+          <ScalarProperty Name="chronosStatus" ColumnName="chronosStatus" />
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="confidential" ColumnName="confidential" />
+          <ScalarProperty Name="contactDate" ColumnName="contactDate" />
+          <ScalarProperty Name="contactTime" ColumnName="contactTime" />
+          <ScalarProperty Name="noncompliance" ColumnName="noncompliance" />
+          <ScalarProperty Name="planChange" ColumnName="planChange" />
+          <ScalarProperty Name="probPts" ColumnName="probPts" />
+          <ScalarProperty Name="respNoncompliance" ColumnName="respNoncompliance" />
+          <ScalarProperty Name="thirdPartyRisk" ColumnName="thirdPartyRisk" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="updatedOn" ColumnName="updatedOn" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChronosCategoryCodes">
+      <EntityTypeMapping TypeName="ChronoModel.ChronosCategoryCode">
+        <MappingFragment StoreEntitySet="ChronosCategoryCode">
+          <ScalarProperty Name="ChronosCategoryCodeId" ColumnName="ChronosCategoryCodeId" />
+          <ScalarProperty Name="contactCatCd" ColumnName="contactCatCd" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nationalCode" ColumnName="nationalCode" />
+          <ScalarProperty Name="sortValue" ColumnName="sortValue" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="updatedOn" ColumnName="updatedOn" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="contactCategory_id" ColumnName="contactCategory_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChronosContacts">
+      <EntityTypeMapping TypeName="ChronoModel.ChronosContact">
+        <MappingFragment StoreEntitySet="ChronosContact">
+          <ScalarProperty Name="ChronosContactID" ColumnName="ChronosContactID" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="updatedOn" ColumnName="updatedOn" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="chronosContactCode_chronosContactCodePKId" ColumnName="chronosContactCode_chronosContactCodePKId" />
+          <ScalarProperty Name="chronosContactCodePKId_ChronosContactCodePKID" ColumnName="chronosContactCodePKId_ChronosContactCodePKID" />
+          <ScalarProperty Name="id_ChronosContactPKID" ColumnName="id_ChronosContactPKID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChronosContactCodes">
+      <EntityTypeMapping TypeName="ChronoModel.ChronosContactCode">
+        <MappingFragment StoreEntitySet="ChronosContactCode">
+          <ScalarProperty Name="chronosContactCodePKId" ColumnName="chronosContactCodePKId" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="alwaysShow" ColumnName="alwaysShow" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="probPts" ColumnName="probPts" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="updatedOn" ColumnName="updatedOn" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="chronosCategoryCode_ChronosCategoryCodeId" ColumnName="chronosCategoryCode_ChronosCategoryCodeId" />
+          <ScalarProperty Name="chronosContactCodePKID_ChronosContactCodePKID" ColumnName="chronosContactCodePKID_ChronosContactCodePKID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChronosContactCodePKs">
+      <EntityTypeMapping TypeName="ChronoModel.ChronosContactCodePK">
+        <MappingFragment StoreEntitySet="ChronosContactCodePK">
+          <ScalarProperty Name="ChronosContactCodePKID" ColumnName="ChronosContactCodePKID" />
+          <ScalarProperty Name="chronosCategoryCode" ColumnName="chronosCategoryCode" />
+          <ScalarProperty Name="probPts" ColumnName="probPts" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="updatedOn" ColumnName="updatedOn" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChronosContactPKs">
+      <EntityTypeMapping TypeName="ChronoModel.ChronosContactPK">
+        <MappingFragment StoreEntitySet="ChronosContactPK">
+          <ScalarProperty Name="ChronosContactPKID" ColumnName="ChronosContactPKID" />
+          <ScalarProperty Name="chronos" ColumnName="chronos" />
+          <ScalarProperty Name="chronosCode" ColumnName="chronosCode" />
+          <ScalarProperty Name="probPts" ColumnName="probPts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactCategories">
+      <EntityTypeMapping TypeName="ChronoModel.ContactCategory">
+        <MappingFragment StoreEntitySet="ContactCategory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ContactCategoryId" ColumnName="ContactCategoryId" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="sortValue" ColumnName="sortValue" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="updatedOn" ColumnName="updatedOn" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="chronosCatCd_ChronosCategoryCodeId" ColumnName="chronosCatCd_ChronosCategoryCodeId" />
+          <ScalarProperty Name="chronosCategoryCode_ChronosCategoryCodeId" ColumnName="chronosCategoryCode_ChronosCategoryCodeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,14 @@
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\AOREST.dll.config
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\AOREST.dll
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\AOREST.pdb
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\EntityFramework.dll
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\RestSharp.dll
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\EntityFramework.xml
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\bin\Debug\RestSharp.xml
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\obj\Debug\AOREST.dll
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\obj\Debug\AOREST.pdb
+C:\Projects\TestApps\REST\WebApi & LightCase\AOREST\AOREST\AOREST\obj\Debug\AOREST.csprojResolveAssemblyReference.cache

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/guideline" xmlns:core="http://gov/usc/codex/core" xmlns:guideline="http://gov/usc/codex/guideline" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:complexType name="baseOffenseLevel">
+    <xs:complexContent>
+      <xs:extension base="guideline:guidelineOption"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="calculation">
+    <xs:complexContent>
+      <xs:extension base="guideline:calculationBase">
+        <xs:sequence>
+          <xs:element name="selections" type="guideline:guidelineOptionSelection" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="calculationBase">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="type" type="xs:string" minOccurs="0"/>
+          <xs:element name="result" type="xs:string" minOccurs="0"/>
+          <xs:element name="overrideResult" type="xs:string" minOccurs="0"/>
+          <xs:element name="overrideValue" type="xs:string" minOccurs="0"/>
+          <xs:element name="primary" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="calculationExtended">
+    <xs:complexContent>
+      <xs:extension base="guideline:calculationBase">
+        <xs:sequence>
+          <xs:element name="selections" type="guideline:guidelineOptionSelectionExtended" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="circuitDistrict">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string" minOccurs="0"/>
+          <xs:element name="dojEquiv" type="xs:string" minOccurs="0"/>
+          <xs:element name="abbreviation" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="chiefPoName" type="xs:string" minOccurs="0"/>
+          <xs:element name="chiefPsoName" type="xs:string" minOccurs="0"/>
+          <xs:element name="mainPtsOffice" type="xs:string" minOccurs="0"/>
+          <xs:element name="mainPoOffice" type="xs:string" minOccurs="0"/>
+          <xs:element name="combined" type="xs:string" minOccurs="0"/>
+          <xs:element name="pactsServer" type="xs:string" minOccurs="0"/>
+          <xs:element name="pactsZone" type="xs:string" minOccurs="0"/>
+          <xs:element name="xferOk" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="count">
+    <xs:complexContent>
+      <xs:extension base="guideline:countBase">
+        <xs:sequence>
+          <xs:element name="calculation" type="guideline:countCalculation" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countBase">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="countNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="countNumberSuffix" type="xs:string" minOccurs="0"/>
+          <xs:element name="title" type="xs:string" minOccurs="0"/>
+          <xs:element name="section" type="xs:string" minOccurs="0"/>
+          <xs:element name="penaltyTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="penaltySection" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="primaryCount" type="xs:string" minOccurs="0"/>
+          <xs:element name="psuedo" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineId" type="xs:string" minOccurs="0"/>
+          <xs:element name="multiCountUnits" type="xs:double" minOccurs="0"/>
+          <xs:element name="offenseLevelCalculationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="countGroupId" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countCalculation">
+    <xs:complexContent>
+      <xs:extension base="guideline:calculation">
+        <xs:sequence>
+          <xs:element name="countId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countCalculationExtended">
+    <xs:complexContent>
+      <xs:extension base="guideline:calculationExtended">
+        <xs:sequence>
+          <xs:element name="countId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countExtended">
+    <xs:complexContent>
+      <xs:extension base="guideline:countBase">
+        <xs:sequence>
+          <xs:element name="calculation" type="guideline:countCalculationExtended" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countGroup">
+    <xs:complexContent>
+      <xs:extension base="guideline:countGroupBase">
+        <xs:sequence>
+          <xs:element name="counts" type="guideline:count" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countGroupBase">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="number" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseLevelCalculationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="groupingRules" type="guideline:guidelineOptionSimple" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countGroupExtended">
+    <xs:complexContent>
+      <xs:extension base="guideline:countGroupBase">
+        <xs:sequence>
+          <xs:element name="counts" type="guideline:countExtended" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countGroupSimple">
+    <xs:complexContent>
+      <xs:extension base="guideline:countGroupBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countSimple">
+    <xs:complexContent>
+      <xs:extension base="guideline:countBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="crossReference">
+    <xs:complexContent>
+      <xs:extension base="guideline:guidelineOption"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="crossReferenceCalculation">
+    <xs:complexContent>
+      <xs:extension base="guideline:calculation">
+        <xs:sequence>
+          <xs:element name="countId" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineOptionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineId" type="xs:string" minOccurs="0"/>
+          <xs:element name="linkedGuidelineOptionSelection" type="guideline:guidelineOptionSelection" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="guideline">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineManualId" type="xs:string" minOccurs="0"/>
+          <xs:element name="chapter" type="xs:string" minOccurs="0"/>
+          <xs:element name="part" type="xs:string" minOccurs="0"/>
+          <xs:element name="subpart" type="xs:string" minOccurs="0"/>
+          <xs:element name="guideline" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="guidelineBol">
+    <xs:complexContent>
+      <xs:extension base="guideline:guideline">
+        <xs:sequence>
+          <xs:element name="baseOffenseLevel" type="guideline:baseOffenseLevel" minOccurs="0"/>
+          <xs:element name="guidelineRules" type="guideline:guidelineRule" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="guidelineDetail">
+    <xs:complexContent>
+      <xs:extension base="guideline:guideline">
+        <xs:sequence>
+          <xs:element name="baseOffenseLevel" type="guideline:baseOffenseLevel" minOccurs="0"/>
+          <xs:element name="specificOffenseCharacteristic" type="guideline:specificOffenseOption" minOccurs="0"/>
+          <xs:element name="specialInstruction" type="guideline:specialInstruction" minOccurs="0"/>
+          <xs:element name="crossReference" type="guideline:crossReference" minOccurs="0"/>
+          <xs:element name="guidelineRules" type="guideline:guidelineRule" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="guidelineManual">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="effectiveDateStart" type="xs:string" minOccurs="0"/>
+          <xs:element name="effectiveDateEnd" type="xs:string" minOccurs="0"/>
+          <xs:element name="ignoreCrackRules" type="xs:string" minOccurs="0"/>
+          <xs:element name="url" type="xs:string" minOccurs="0"/>
+          <xs:element name="active" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="guidelineOption">
+    <xs:complexContent>
+      <xs:extension base="guideline:guidelineOptionSimple"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="guidelineOptionSelection">
+    <xs:complexContent>
+      <xs:extension base="guideline:guidelineOptionSelectionBase">
+        <xs:sequence>
+          <xs:element name="calculationId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="guidelineOptionSelectionBase">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseLevelCalculationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineOptionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="type" type="xs:string" minOccurs="0"/>
+          <xs:element name="value" type="xs:string" minOccurs="0"/>
+          <xs:element name="comment" type="xs:string" minOccurs="0"/>
+          <xs:element name="lookupTableOptionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="linkedGuidelineId" type="xs:string" minOccurs="0"/>
+          <xs:element name="linkedCalculationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="linkedJOCalculation" type="guideline:jumpOutCalculation" minOccurs="0"/>
+          <xs:element name="linkedCRCalculation" type="guideline:crossReferenceCalculation" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="guidelineOptionSelectionExtended">
+    <xs:complexContent>
+      <xs:extension base="guideline:guidelineOptionSelectionBase">
+        <xs:sequence>
+          <xs:element name="calculationId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="guidelineOptionSimple">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="className" type="xs:string" minOccurs="0"/>
+          <xs:element name="indention" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineOptionType" type="xs:string" minOccurs="0"/>
+          <xs:element name="pointValue" type="xs:string" minOccurs="0"/>
+          <xs:element name="childGroupingType" type="xs:string" minOccurs="0"/>
+          <xs:element name="pointApplicationType" type="xs:string" minOccurs="0"/>
+          <xs:element name="sortVal" type="xs:string" minOccurs="0"/>
+          <xs:element name="lookupTable" type="guideline:lookupTable" minOccurs="0"/>
+          <xs:element name="lookupTableAdjustment" type="xs:string" minOccurs="0"/>
+          <xs:element name="jumpOutAdjustment" type="xs:string" minOccurs="0"/>
+          <xs:element name="ignorePreviousSelections" type="xs:string" minOccurs="0"/>
+          <xs:element name="parentGuidelineId" type="xs:string" minOccurs="0"/>
+          <xs:element name="childOptions" type="guideline:guidelineOption" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="linkedGuidelines" type="guideline:guideline" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="guidelineRule">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineId" type="xs:string" minOccurs="0"/>
+          <xs:element name="sortVal" type="xs:string" minOccurs="0"/>
+          <xs:element name="type" type="xs:string" minOccurs="0"/>
+          <xs:element name="placementOptionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="indentionType" type="xs:string" minOccurs="0"/>
+          <xs:element name="value" type="xs:string" minOccurs="0"/>
+          <xs:element name="appliesToOptions" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="optionExceptions" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="jumpOutCalculation">
+    <xs:complexContent>
+      <xs:extension base="guideline:calculation">
+        <xs:sequence>
+          <xs:element name="countId" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineOptionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineId" type="xs:string" minOccurs="0"/>
+          <xs:element name="linkedGuidelineOptionSelection" type="guideline:guidelineOptionSelection" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="lookupTable">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineManualId" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="lookupTableOptions" type="guideline:lookupTableOption" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="lookupTableOption">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="subsection" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="adjustment" type="xs:string" minOccurs="0"/>
+          <xs:element name="lookupTableId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="offenseLevelCalculation">
+    <xs:complexContent>
+      <xs:extension base="guideline:offenseLevelCalculationBase">
+        <xs:sequence>
+          <xs:element name="ungroupedCounts" type="guideline:ungroupedCount" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="countGroups" type="guideline:countGroup" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="selections" type="guideline:guidelineOptionSelection" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="offenseLevelCalculationBase">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="psrStaffId" type="xs:string" minOccurs="0"/>
+          <xs:element name="circuitDistrictCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="docketNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="defendantNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="psiAssignedDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="sequenceNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineManualId" type="xs:string" minOccurs="0"/>
+          <xs:element name="result" type="xs:string" minOccurs="0"/>
+          <xs:element name="overrideResult17" type="xs:string" minOccurs="0"/>
+          <xs:element name="isResultCapped" type="xs:string" minOccurs="0"/>
+          <xs:element name="selected" type="xs:string" minOccurs="0"/>
+          <xs:element name="addCountEnabled" type="xs:string" minOccurs="0"/>
+          <xs:element name="overrideValue" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="offenseLevelCalculationExtended">
+    <xs:complexContent>
+      <xs:extension base="guideline:offenseLevelCalculationBase">
+        <xs:sequence>
+          <xs:element name="ungroupedCounts" type="guideline:countExtended" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="countGroups" type="guideline:countGroupExtended" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="selections" type="guideline:guidelineOptionSelectionExtended" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="offenseLevelCalculationSimple">
+    <xs:complexContent>
+      <xs:extension base="guideline:offenseLevelCalculationBase">
+        <xs:sequence>
+          <xs:element name="counts" type="guideline:countSimple" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="specialInstruction">
+    <xs:complexContent>
+      <xs:extension base="guideline:guidelineOption"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="specificOffenseOption">
+    <xs:complexContent>
+      <xs:extension base="guideline:guidelineOption"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="substance">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="guidelineManualId" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="type" type="xs:string" minOccurs="0"/>
+          <xs:element name="category" type="xs:string" minOccurs="0"/>
+          <xs:element name="rules" type="guideline:substanceRule" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="equivalencies" type="guideline:substanceEquivalency" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="substanceEquivalency">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="fromSubstanceId" type="xs:string" minOccurs="0"/>
+          <xs:element name="fromAmount" type="xs:double" minOccurs="0"/>
+          <xs:element name="fromUnitOfMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="toSubstanceId" type="xs:string" minOccurs="0"/>
+          <xs:element name="toAmount" type="xs:double" minOccurs="0"/>
+          <xs:element name="toUnitOfMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="substanceOffense">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="substanceId" type="xs:string" minOccurs="0"/>
+          <xs:element name="amount" type="xs:double" minOccurs="0"/>
+          <xs:element name="unitOfMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseLevel" type="xs:string" minOccurs="0"/>
+          <xs:element name="equivalentGramsOfMarijuana" type="xs:double" minOccurs="0"/>
+          <xs:element name="substanceOffenseCalculationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SubstanceOffenseCalculation">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="type" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseLevelCalculationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="countId" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalOffenseLevel" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalEquivalentGramsOfMarijuana" type="xs:double" minOccurs="0"/>
+          <xs:element name="substanceOffenseCalculationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenses" type="guideline:substanceOffense" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="substanceRule">
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="substanceId" type="xs:string" minOccurs="0"/>
+          <xs:element name="amountLow" type="xs:double" minOccurs="0"/>
+          <xs:element name="amountLowUnitOfMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="amountHigh" type="xs:double" minOccurs="0"/>
+          <xs:element name="amountHighUnitOfMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="noUpperLimit" type="xs:string" minOccurs="0"/>
+          <xs:element name="actual" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseLevel" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ungroupedCount">
+    <xs:complexContent>
+      <xs:extension base="guideline:countBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

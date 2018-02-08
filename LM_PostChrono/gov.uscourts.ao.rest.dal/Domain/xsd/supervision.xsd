@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/supervision" xmlns:supervision="http://gov/usc/codex/pacts/supervision" xmlns:client="http://gov/usc/codex/pacts/client" xmlns:docket="http://gov/usc/codex/pacts/docket" xmlns:core="http://gov/usc/codex/core" xmlns:reftype="http://gov/usc/codex/pacts/reftype" xmlns:district="http://gov/usc/codex/pacts/district" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/pacts/client" schemaLocation="client.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/docket" schemaLocation="docket.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/reftype" schemaLocation="reftype.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/district" schemaLocation="district.xsd"/>
+  <xs:complexType name="supervision">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for supervision complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="supervision">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/supervision}supervisionBase">
+&lt;sequence>
+&lt;element name="causeOfDeath" type="{http://gov/usc/codex/pacts/reftype}causeOfDeath" minOccurs="0"/>
+&lt;element name="closeCode" type="{http://gov/usc/codex/pacts/reftype}closeCode" minOccurs="0"/>
+&lt;element name="criminalConductChargeType" type="{http://gov/usc/codex/pacts/reftype}chargeType" minOccurs="0"/>
+&lt;element name="currentStatus" type="{http://gov/usc/codex/pacts/reftype}supvStatus" minOccurs="0"/>
+&lt;element name="inactiveCode" type="{http://gov/usc/codex/pacts/reftype}inactive" minOccurs="0"/>
+&lt;element name="jurisTransferFrom" type="{http://gov/usc/codex/pacts/district}circuitDistrict" minOccurs="0"/>
+&lt;element name="jurisTransferTo" type="{http://gov/usc/codex/pacts/district}circuitDistrict" minOccurs="0"/>
+&lt;element name="oldRevocationOffense" type="{http://gov/usc/codex/pacts/reftype}offense" minOccurs="0"/>
+&lt;element name="originalStatus" type="{http://gov/usc/codex/pacts/reftype}supvStatus" minOccurs="0"/>
+&lt;element name="revocationCharge" type="{http://gov/usc/codex/pacts/docket}charge" minOccurs="0"/>
+&lt;element name="revocationOffenseViolationType" type="{http://gov/usc/codex/pacts/reftype}revocationOffenseViolationType" minOccurs="0"/>
+&lt;element name="revocationViolationType" type="{http://gov/usc/codex/pacts/reftype}revocationViolationType" minOccurs="0"/>
+&lt;element name="supervisionLevel" type="{http://gov/usc/codex/pacts/reftype}supervisionLevel" minOccurs="0"/>
+&lt;element name="supervisionTransferFromDistrict" type="{http://gov/usc/codex/pacts/district}circuitDistrict" minOccurs="0"/>
+&lt;element name="supervisionTransferToDistrict" type="{http://gov/usc/codex/pacts/district}circuitDistrict" minOccurs="0"/>
+&lt;element name="supervisionType" type="{http://gov/usc/codex/pacts/reftype}supvCaseType" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="supervision:supervisionBase">
+        <xs:sequence>
+          <xs:element name="causeOfDeath" type="reftype:causeOfDeath" minOccurs="0"/>
+          <xs:element name="closeCode" type="reftype:closeCode" minOccurs="0"/>
+          <xs:element name="criminalConductChargeType" type="reftype:chargeType" minOccurs="0"/>
+          <xs:element name="currentStatus" type="reftype:supvStatus" minOccurs="0"/>
+          <xs:element name="inactiveCode" type="reftype:inactive" minOccurs="0"/>
+          <xs:element name="jurisTransferFrom" type="district:circuitDistrict" minOccurs="0"/>
+          <xs:element name="jurisTransferTo" type="district:circuitDistrict" minOccurs="0"/>
+          <xs:element name="oldRevocationOffense" type="reftype:offense" minOccurs="0"/>
+          <xs:element name="originalStatus" type="reftype:supvStatus" minOccurs="0"/>
+          <xs:element name="revocationCharge" type="docket:charge" minOccurs="0"/>
+          <xs:element name="revocationOffenseViolationType" type="reftype:revocationOffenseViolationType" minOccurs="0"/>
+          <xs:element name="revocationViolationType" type="reftype:revocationViolationType" minOccurs="0"/>
+          <xs:element name="supervisionLevel" type="reftype:supervisionLevel" minOccurs="0"/>
+          <xs:element name="supervisionTransferFromDistrict" type="district:circuitDistrict" minOccurs="0"/>
+          <xs:element name="supervisionTransferToDistrict" type="district:circuitDistrict" minOccurs="0"/>
+          <xs:element name="supervisionType" type="reftype:supvCaseType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="supervisionBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for supervisionBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="supervisionBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="assignDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="beginProfileId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="caseDefendantId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="causeOfDeathId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="closeCodeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="criminalConductChargeTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="criminalConductDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="currentStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="endProfileId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="expirationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="inactiveCodeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="initialInactiveActDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="judgeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="jurisTransferFromId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="jurisTransferToId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="oldRevocationOffenseId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="oldRevocationType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="originalStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="presuperStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="receiveDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="revocationChargeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="revocationOffenseViolationTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="revocationViolationTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="rpiScore" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="superToFollow" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supervisionLevelId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="supervisionTypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supervisionTransferFromDistrictId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supervisionTransferFromOfficer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supervisionTransferToDistrictId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supervisionTransferToOfficer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="transferInClientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="transferInDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="assignDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="beginProfileId" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseDefendantId" type="xs:string" minOccurs="0"/>
+          <xs:element name="causeOfDeathId" type="xs:string" minOccurs="0"/>
+          <xs:element name="closeCodeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalConductChargeTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="criminalConductDescription" type="xs:string" minOccurs="0"/>
+          <xs:element name="currentStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="endProfileId" type="xs:string" minOccurs="0"/>
+          <xs:element name="expirationDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="inactiveCodeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="initialInactiveActDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="judgeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="jurisTransferFromId" type="xs:string" minOccurs="0"/>
+          <xs:element name="jurisTransferToId" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldRevocationOffenseId" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldRevocationType" type="xs:string" minOccurs="0"/>
+          <xs:element name="originalStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="presuperStartDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="receiveDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationChargeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationOffenseViolationTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="revocationViolationTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="rpiScore" type="xs:string" minOccurs="0"/>
+          <xs:element name="superToFollow" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionLevelId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionTransferFromDistrictId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionTransferFromOfficer" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionTransferToDistrictId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionTransferToOfficer" type="xs:string" minOccurs="0"/>
+          <xs:element name="transferInClientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="transferInDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="supervisionComplete">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for supervisionComplete complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="supervisionComplete">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/supervision}supervisionBase">
+&lt;sequence>
+&lt;element name="beginProfile" type="{http://gov/usc/codex/pacts/client}clientProfile" minOccurs="0"/>
+&lt;element name="causeOfDeath" type="{http://gov/usc/codex/pacts/reftype}causeOfDeath" minOccurs="0"/>
+&lt;element name="closeCode" type="{http://gov/usc/codex/pacts/reftype}closeCode" minOccurs="0"/>
+&lt;element name="criminalConductChargeType" type="{http://gov/usc/codex/pacts/reftype}chargeType" minOccurs="0"/>
+&lt;element name="currentStatus" type="{http://gov/usc/codex/pacts/reftype}supvStatus" minOccurs="0"/>
+&lt;element name="endProfile" type="{http://gov/usc/codex/pacts/client}clientProfile" minOccurs="0"/>
+&lt;element name="inactiveCode" type="{http://gov/usc/codex/pacts/reftype}inactive" minOccurs="0"/>
+&lt;element name="judge" type="{http://gov/usc/codex/pacts/district}judge" minOccurs="0"/>
+&lt;element name="jurisTransferFrom" type="{http://gov/usc/codex/pacts/district}circuitDistrict" minOccurs="0"/>
+&lt;element name="jurisTransferTo" type="{http://gov/usc/codex/pacts/district}circuitDistrict" minOccurs="0"/>
+&lt;element name="officer" type="{http://gov/usc/codex/pacts/district}staff" minOccurs="0"/>
+&lt;element name="oldRevocationOffense" type="{http://gov/usc/codex/pacts/reftype}offense" minOccurs="0"/>
+&lt;element name="originalStatus" type="{http://gov/usc/codex/pacts/reftype}supvStatus" minOccurs="0"/>
+&lt;element name="revocationCharge" type="{http://gov/usc/codex/pacts/docket}charge" minOccurs="0"/>
+&lt;element name="revocationOffenseViolationType" type="{http://gov/usc/codex/pacts/reftype}revocationOffenseViolationType" minOccurs="0"/>
+&lt;element name="revocationViolationType" type="{http://gov/usc/codex/pacts/reftype}revocationViolationType" minOccurs="0"/>
+&lt;element name="supervisionLevel" type="{http://gov/usc/codex/pacts/reftype}supervisionLevel" minOccurs="0"/>
+&lt;element name="supervisionTransferFromDistrict" type="{http://gov/usc/codex/pacts/district}circuitDistrict" minOccurs="0"/>
+&lt;element name="supervisionTransferToDistrict" type="{http://gov/usc/codex/pacts/district}circuitDistrict" minOccurs="0"/>
+&lt;element name="supervisionType" type="{http://gov/usc/codex/pacts/reftype}supvCaseType" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="supervision:supervisionBase">
+        <xs:sequence>
+          <xs:element name="beginProfile" type="client:clientProfile" minOccurs="0"/>
+          <xs:element name="causeOfDeath" type="reftype:causeOfDeath" minOccurs="0"/>
+          <xs:element name="closeCode" type="reftype:closeCode" minOccurs="0"/>
+          <xs:element name="criminalConductChargeType" type="reftype:chargeType" minOccurs="0"/>
+          <xs:element name="currentStatus" type="reftype:supvStatus" minOccurs="0"/>
+          <xs:element name="endProfile" type="client:clientProfile" minOccurs="0"/>
+          <xs:element name="inactiveCode" type="reftype:inactive" minOccurs="0"/>
+          <xs:element name="judge" type="district:judge" minOccurs="0"/>
+          <xs:element name="jurisTransferFrom" type="district:circuitDistrict" minOccurs="0"/>
+          <xs:element name="jurisTransferTo" type="district:circuitDistrict" minOccurs="0"/>
+          <xs:element name="officer" type="district:staff" minOccurs="0"/>
+          <xs:element name="oldRevocationOffense" type="reftype:offense" minOccurs="0"/>
+          <xs:element name="originalStatus" type="reftype:supvStatus" minOccurs="0"/>
+          <xs:element name="revocationCharge" type="docket:charge" minOccurs="0"/>
+          <xs:element name="revocationOffenseViolationType" type="reftype:revocationOffenseViolationType" minOccurs="0"/>
+          <xs:element name="revocationViolationType" type="reftype:revocationViolationType" minOccurs="0"/>
+          <xs:element name="supervisionLevel" type="reftype:supervisionLevel" minOccurs="0"/>
+          <xs:element name="supervisionTransferFromDistrict" type="district:circuitDistrict" minOccurs="0"/>
+          <xs:element name="supervisionTransferToDistrict" type="district:circuitDistrict" minOccurs="0"/>
+          <xs:element name="supervisionType" type="reftype:supvCaseType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

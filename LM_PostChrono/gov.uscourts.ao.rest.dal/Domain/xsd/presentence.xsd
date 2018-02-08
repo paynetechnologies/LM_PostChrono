@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/presentence" xmlns:client="http://gov/usc/codex/pacts/client" xmlns:docket="http://gov/usc/codex/pacts/docket" xmlns:core="http://gov/usc/codex/core" xmlns:presentence="http://gov/usc/codex/pacts/presentence" xmlns:reftype="http://gov/usc/codex/pacts/reftype" xmlns:district="http://gov/usc/codex/pacts/district" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/pacts/client" schemaLocation="client.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/docket" schemaLocation="docket.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/reftype" schemaLocation="reftype.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/district" schemaLocation="district.xsd"/>
+  <xs:complexType name="agency">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for agency complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="agency">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="address1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="address2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="agencyName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="isActive" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;element name="attentionLine" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="city" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="oriNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="state" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="zip" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="address1" type="xs:string" minOccurs="0"/>
+          <xs:element name="address2" type="xs:string" minOccurs="0"/>
+          <xs:element name="agencyName" type="xs:string" minOccurs="0"/>
+          <xs:element name="isActive" type="xs:string" minOccurs="0"/>
+          <xs:element name="attentionLine" type="xs:string" minOccurs="0"/>
+          <xs:element name="city" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="oriNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="state" type="xs:string" minOccurs="0"/>
+          <xs:element name="zip" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0"/>
+          <xs:element name="fax" type="xs:string" minOccurs="0"/>
+          <xs:element name="email" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="clientPreSentence">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for clientPreSentence complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="clientPreSentence">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/client}clientBase">
+&lt;sequence>
+&lt;element name="docketDefendantPreSentences" type="{http://gov/usc/codex/pacts/presentence}docketDefendantPreSentence" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="client:clientBase">
+        <xs:sequence>
+          <xs:element name="docketDefendantPreSentences" type="presentence:docketDefendantPreSentence" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="docketDefendantPreSentence">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for docketDefendantPreSentence complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="docketDefendantPreSentence">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="docketDefendant" type="{http://gov/usc/codex/pacts/docket}docketDefendant" minOccurs="0"/>
+&lt;element name="docketDefendantId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="preSentenceInvestigation" type="{http://gov/usc/codex/pacts/presentence}preSentenceInvestigation" minOccurs="0"/>
+&lt;element name="preSentenceInvestigationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="primaryCase" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="docketDefendant" type="docket:docketDefendant" minOccurs="0"/>
+          <xs:element name="docketDefendantId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="preSentenceInvestigation" type="presentence:preSentenceInvestigation" minOccurs="0"/>
+          <xs:element name="preSentenceInvestigationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="primaryCase" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceAttorney">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceAttorney complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceAttorney">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="attorney" type="{http://gov/usc/codex/pacts/district}attorney" minOccurs="0"/>
+&lt;element name="attorneyId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="preSentenceInvestigationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="attorney" type="district:attorney" minOccurs="0"/>
+          <xs:element name="attorneyId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="preSentenceInvestigationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceConvictedOffense">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceConvictedOffense complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceConvictedOffense">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="countNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="enhanced851Applies" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fineCitationTitle" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="fineSectionSubsection" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="jvtaAssessment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="mandatoryConsecSent" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="maxTermImprisonAmt" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="maxTermImprisonUnit" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="maximumFine" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="minTermImprisonAmt" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="minTermImprisonUnit" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="offenseClass" type="{http://gov/usc/codex/pacts/reftype}offenseLevel" minOccurs="0"/>
+&lt;element name="offenseClassId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="offenseDesc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="offenseEndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="offenseStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="preSentenceInvestigationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="probationPrecluded" type="{http://gov/usc/codex/pacts/reftype}probationPrecluded" minOccurs="0"/>
+&lt;element name="probationPrecludedId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="safetyValve" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="sectionSubsection" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="specialAssessAmount" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="substantialAssistance" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="superRelMaxAmt" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="superRelMaxUnit" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="superRelMinAmt" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="superRelMinUnit" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="countNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="enhanced851Applies" type="xs:string" minOccurs="0"/>
+          <xs:element name="fineCitationTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="fineSectionSubsection" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="jvtaAssessment" type="xs:string" minOccurs="0"/>
+          <xs:element name="mandatoryConsecSent" type="xs:string" minOccurs="0"/>
+          <xs:element name="maxTermImprisonAmt" type="xs:short" minOccurs="0"/>
+          <xs:element name="maxTermImprisonUnit" type="xs:string" minOccurs="0"/>
+          <xs:element name="maximumFine" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="minTermImprisonAmt" type="xs:short" minOccurs="0"/>
+          <xs:element name="minTermImprisonUnit" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseClass" type="reftype:offenseLevel" minOccurs="0"/>
+          <xs:element name="offenseClassId" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseDesc" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseEndDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="offenseStartDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="preSentenceInvestigationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="probationPrecluded" type="reftype:probationPrecluded" minOccurs="0"/>
+          <xs:element name="probationPrecludedId" type="xs:string" minOccurs="0"/>
+          <xs:element name="safetyValve" type="xs:string" minOccurs="0"/>
+          <xs:element name="sectionSubsection" type="xs:string" minOccurs="0"/>
+          <xs:element name="specialAssessAmount" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="substantialAssistance" type="xs:string" minOccurs="0"/>
+          <xs:element name="superRelMaxAmt" type="xs:short" minOccurs="0"/>
+          <xs:element name="superRelMaxUnit" type="xs:string" minOccurs="0"/>
+          <xs:element name="superRelMinAmt" type="xs:short" minOccurs="0"/>
+          <xs:element name="superRelMinUnit" type="xs:string" minOccurs="0"/>
+          <xs:element name="title" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceInvestigation">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceInvestigation complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceInvestigation">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/presentence}preSentenceInvestigationBase">
+&lt;sequence>
+&lt;element name="docketDefendantPreSentence" type="{http://gov/usc/codex/pacts/presentence}docketDefendantPreSentence" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="presentence:preSentenceInvestigationBase">
+        <xs:sequence>
+          <xs:element name="docketDefendantPreSentence" type="presentence:docketDefendantPreSentence" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceInvestigationBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceInvestigationBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceInvestigationBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="adjudicationDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="assignedDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="codefNarrative" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="disclosureDueDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="disclosureMadeDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="draftDueSuspoDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="draftSubmittedDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="faceSheetAka" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fnlRptDueDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="fnlRptSubmitDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="investType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="judicialOfficer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="jurisAuthority" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="relatedCasesNarrative" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="requestingJuris" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="restitutionLetter" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="sentenceDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+&lt;element name="sentenceLocation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="adjudicationDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="assignedDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="codefNarrative" type="xs:string" minOccurs="0"/>
+          <xs:element name="disclosureDueDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="disclosureMadeDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="draftDueSuspoDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="draftSubmittedDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="faceSheetAka" type="xs:string" minOccurs="0"/>
+          <xs:element name="fnlRptDueDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="fnlRptSubmitDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="investType" type="xs:string" minOccurs="0"/>
+          <xs:element name="judicialOfficer" type="xs:string" minOccurs="0"/>
+          <xs:element name="jurisAuthority" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="relatedCasesNarrative" type="xs:string" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="requestingJuris" type="xs:string" minOccurs="0"/>
+          <xs:element name="restitutionLetter" type="xs:string" minOccurs="0"/>
+          <xs:element name="sentenceDateTime" type="xs:string" minOccurs="0"/>
+          <xs:element name="sentenceLocation" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceInvestigationCourtRecord">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceInvestigationCourtRecord complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceInvestigationCourtRecord">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/presentence}preSentenceInvestigationBase">
+&lt;sequence>
+&lt;element name="coDefendants" type="{http://gov/usc/codex/pacts/presentence}preSentenceRelatedCoDefendant" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="relatedCases" type="{http://gov/usc/codex/pacts/presentence}preSentenceRelatedCase" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="presentence:preSentenceInvestigationBase">
+        <xs:sequence>
+          <xs:element name="coDefendants" type="presentence:preSentenceRelatedCoDefendant" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="relatedCases" type="presentence:preSentenceRelatedCase" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceInvestigationCriminalHistory">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceInvestigationCriminalHistory complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceInvestigationCriminalHistory">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/presentence}preSentenceInvestigationBase">
+&lt;sequence>
+&lt;element name="convictedOffenses" type="{http://gov/usc/codex/pacts/presentence}preSentenceConvictedOffense" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="presentence:preSentenceInvestigationBase">
+        <xs:sequence>
+          <xs:element name="convictedOffenses" type="presentence:preSentenceConvictedOffense" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceInvestigationDetail">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceInvestigationDetail complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceInvestigationDetail">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/presentence}preSentenceInvestigationBase">
+&lt;sequence>
+&lt;element name="homeInspections" type="{http://gov/usc/codex/pacts/presentence}preSentenceInvestigationHomeInspection" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="preSentenceAttorneys" type="{http://gov/usc/codex/pacts/presentence}preSentenceAttorney" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="probationForm14s" type="{http://gov/usc/codex/pacts/presentence}preSentenceProbationForm14" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="victims" type="{http://gov/usc/codex/pacts/presentence}preSentenceVictim" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="writtenRecordChecks" type="{http://gov/usc/codex/pacts/presentence}preSentenceWrittenRecordCheck" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="presentence:preSentenceInvestigationBase">
+        <xs:sequence>
+          <xs:element name="homeInspections" type="presentence:preSentenceInvestigationHomeInspection" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="preSentenceAttorneys" type="presentence:preSentenceAttorney" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="probationForm14s" type="presentence:preSentenceProbationForm14" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="victims" type="presentence:preSentenceVictim" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="writtenRecordChecks" type="presentence:preSentenceWrittenRecordCheck" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceInvestigationHomeInspection">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceInvestigationHomeInspection complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceInvestigationHomeInspection">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="explainOtherWaived" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="homeInspectionCompletedDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="homeInspectionText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="homeInspectionWaived" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="preSentenceInvestigationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="reasonInspectionWaived" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="explainOtherWaived" type="xs:string" minOccurs="0"/>
+          <xs:element name="homeInspectionCompletedDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="homeInspectionText" type="xs:string" minOccurs="0"/>
+          <xs:element name="homeInspectionWaived" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="preSentenceInvestigationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="reasonInspectionWaived" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceProbationForm14">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceProbationForm14 complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceProbationForm14">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="agencyReportTypeLinkId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="corrobAddtlInfo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="preSentenceInvestigationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="receivedDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="sentDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="agencyReportTypeLinkId" type="xs:string" minOccurs="0"/>
+          <xs:element name="corrobAddtlInfo" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="preSentenceInvestigationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="receivedDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="sentDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceRelatedCase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceRelatedCase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceRelatedCase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="circuitDistrict" type="{http://gov/usc/codex/pacts/district}circuitDistrictBase" minOccurs="0"/>
+&lt;element name="circuitDistrictId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="generation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="middleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="preSentenceInvestigationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="relatedCaseOfficer" type="{http://gov/usc/codex/pacts/district}staff" minOccurs="0"/>
+&lt;element name="relatedCaseOfficerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="relatedDocketDefendantNo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="circuitDistrict" type="district:circuitDistrictBase" minOccurs="0"/>
+          <xs:element name="circuitDistrictId" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="generation" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="preSentenceInvestigationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="relatedCaseOfficer" type="district:staff" minOccurs="0"/>
+          <xs:element name="relatedCaseOfficerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="relatedDocketDefendantNo" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceRelatedCoDefendant">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceRelatedCoDefendant complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceRelatedCoDefendant">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="cmecfCaseId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="cmecfPartySeqNo" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="codefFirstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="codefGeneration" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="codefLastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="codefMiddleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="codefOfficer" type="{http://gov/usc/codex/pacts/district}staff" minOccurs="0"/>
+&lt;element name="codefOfficerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="codefStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="codefStatusDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="docket" type="{http://gov/usc/codex/pacts/docket}docket" minOccurs="0"/>
+&lt;element name="docketDefNo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docketId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="preSentenceInvestigationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="cmecfCaseId" type="xs:string" minOccurs="0"/>
+          <xs:element name="cmecfPartySeqNo" type="xs:string" minOccurs="0"/>
+          <xs:element name="codefFirstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="codefGeneration" type="xs:string" minOccurs="0"/>
+          <xs:element name="codefLastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="codefMiddleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="codefOfficer" type="district:staff" minOccurs="0"/>
+          <xs:element name="codefOfficerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="codefStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="codefStatusDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="docket" type="docket:docket" minOccurs="0"/>
+          <xs:element name="docketDefNo" type="xs:string" minOccurs="0"/>
+          <xs:element name="docketId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="preSentenceInvestigationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceVictim">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceVictim complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceVictim">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="address1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="address2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="city" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="companyCorporation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="generation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="letterType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="middleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="monetaryLoss" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="preSentenceInvestigationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="receivedDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="sentDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="state" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="victimTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="zip" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="address1" type="xs:string" minOccurs="0"/>
+          <xs:element name="address2" type="xs:string" minOccurs="0"/>
+          <xs:element name="city" type="xs:string" minOccurs="0"/>
+          <xs:element name="companyCorporation" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="generation" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="letterType" type="xs:string" minOccurs="0"/>
+          <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="monetaryLoss" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0"/>
+          <xs:element name="preSentenceInvestigationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="receivedDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="sentDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="state" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+          <xs:element name="victimTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="zip" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="preSentenceWrittenRecordCheck">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for preSentenceWrittenRecordCheck complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="preSentenceWrittenRecordCheck">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="agencyReportTypeLinkId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="preSentenceInvestigationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="receivedDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="sentDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="agencyReportTypeLinkId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="preSentenceInvestigationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="receivedDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="sentDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

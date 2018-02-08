@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/district" xmlns:core="http://gov/usc/codex/core" xmlns:reftype="http://gov/usc/codex/pacts/reftype" xmlns:district="http://gov/usc/codex/pacts/district" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/reftype" schemaLocation="reftype.xsd"/>
+  <xs:complexType name="attorney">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for attorney complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="attorney">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="address1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="address2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="attorneyType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="city" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="generation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="isFromCmecf" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;element name="isUsAttorney" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="middleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="state" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="zip" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="address1" type="xs:string" minOccurs="0"/>
+          <xs:element name="address2" type="xs:string" minOccurs="0"/>
+          <xs:element name="attorneyType" type="xs:string" minOccurs="0"/>
+          <xs:element name="city" type="xs:string" minOccurs="0"/>
+          <xs:element name="email" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="generation" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="isFromCmecf" type="xs:string" minOccurs="0"/>
+          <xs:element name="isUsAttorney" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0"/>
+          <xs:element name="state" type="xs:string" minOccurs="0"/>
+          <xs:element name="zip" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="circuitDistrict">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for circuitDistrict complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="circuitDistrict">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/district}circuitDistrictAbstract">
+&lt;sequence>
+&lt;element name="divisionalOffices" type="{http://gov/usc/codex/pacts/district}divisionalOffice" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="mainPoOffice" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="mainPoOfficeAddresses" type="{http://gov/usc/codex/pacts/district}officeAddress" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="mainPtsOffice" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="mainPtsOfficeAddresses" type="{http://gov/usc/codex/pacts/district}officeAddress" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="district:circuitDistrictAbstract">
+        <xs:sequence>
+          <xs:element name="divisionalOffices" type="district:divisionalOffice" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="mainPoOffice" type="xs:string" minOccurs="0"/>
+          <xs:element name="mainPoOfficeAddresses" type="district:officeAddress" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="mainPtsOffice" type="xs:string" minOccurs="0"/>
+          <xs:element name="mainPtsOfficeAddresses" type="district:officeAddress" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="circuitDistrictAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for circuitDistrictAbstract complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="circuitDistrictAbstract">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="abbreviation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="chiefPoName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="chiefPsoName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="combined" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dojEquiv" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="abbreviation" type="xs:string" minOccurs="0"/>
+          <xs:element name="chiefPoName" type="xs:string" minOccurs="0"/>
+          <xs:element name="chiefPsoName" type="xs:string" minOccurs="0"/>
+          <xs:element name="combined" type="xs:string" minOccurs="0"/>
+          <xs:element name="dojEquiv" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="circuitDistrictBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for circuitDistrictBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="circuitDistrictBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/district}circuitDistrictAbstract">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="district:circuitDistrictAbstract"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="circuitDistrictBaseReadOnly">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for circuitDistrictBaseReadOnly complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="circuitDistrictBaseReadOnly">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="abbreviation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="chiefPoName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="chiefPsoName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="combined" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dojEquiv" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="abbreviation" type="xs:string" minOccurs="0"/>
+          <xs:element name="chiefPoName" type="xs:string" minOccurs="0"/>
+          <xs:element name="chiefPsoName" type="xs:string" minOccurs="0"/>
+          <xs:element name="combined" type="xs:string" minOccurs="0"/>
+          <xs:element name="dojEquiv" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="divisionalOffice">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for divisionalOffice complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="divisionalOffice">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://gov/usc/codex/pacts/district}divisionalOfficePK" minOccurs="0"/>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="district:divisionalOfficePK" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="divisionalOfficePK">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for divisionalOfficePK complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="divisionalOfficePK">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="officeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officeNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="officeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="officeNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="judge">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for judge complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="judge">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="address" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="alwaysShow" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="buildingName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="chambersRoomNo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="city" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="courtroomNo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="generation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="homeJurisdiction" type="{http://gov/usc/codex/pacts/district}circuitDistrictBase" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="initials" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="isNational" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="middleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="poBox" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="state" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="zipCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="address" type="xs:string" minOccurs="0"/>
+          <xs:element name="alwaysShow" type="xs:string" minOccurs="0"/>
+          <xs:element name="buildingName" type="xs:string" minOccurs="0"/>
+          <xs:element name="chambersRoomNo" type="xs:string" minOccurs="0"/>
+          <xs:element name="city" type="xs:string" minOccurs="0"/>
+          <xs:element name="courtroomNo" type="xs:string" minOccurs="0"/>
+          <xs:element name="fax" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="generation" type="xs:string" minOccurs="0"/>
+          <xs:element name="homeJurisdiction" type="district:circuitDistrictBase" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="initials" type="xs:string" minOccurs="0"/>
+          <xs:element name="isNational" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0"/>
+          <xs:element name="poBox" type="xs:string" minOccurs="0"/>
+          <xs:element name="state" type="xs:string" minOccurs="0"/>
+          <xs:element name="title" type="xs:string" minOccurs="0"/>
+          <xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="localCircuitDistrictConfiguration">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for localCircuitDistrictConfiguration complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="localCircuitDistrictConfiguration">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="addVerifyFlag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="addressApiId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="areaCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseIntPlanPerd" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="caseUpdPlanPerd" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="chronosTimeFlag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="clerksName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="confChronoBanner" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="deputyClerksName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="detnCost" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="district" type="{http://gov/usc/codex/pacts/district}circuitDistrict" minOccurs="0"/>
+&lt;element name="districtType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="drugTestModel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="drugTestStart" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="googleApiKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="highProfile" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="inetProxyPort" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="inetProxyServer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="mapsFeatureFlag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="mapsProvClientsFlag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="maxPhasesPerDay" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="mono109ImplmtDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="mono111ImplmtDt" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="mpartMaxMemSize" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="mpartMaxReqSize" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="mpartTmpDir" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="opmWorkYear" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="pcCountOnHand" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="pcaseIntChrInst" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="pcaseIntPlnPerd" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="pcaseUpdChrInst" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="pcaseUpdPlnPerd" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="probOffices" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="probRecordRet" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="psiDiscDueNumDays" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="psiDueCourtNumDays" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="psiDueSentOrAssign" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="psiDueSuspoNumDays" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="ptsOffices" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="ptsRecordRet" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="ptsSupvMonImp" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="rpiStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="smtpServer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="timeZoneName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="useCannedText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="vccaLive" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="addVerifyFlag" type="xs:string" minOccurs="0"/>
+          <xs:element name="addressApiId" type="xs:string" minOccurs="0"/>
+          <xs:element name="areaCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseIntPlanPerd" type="xs:short" minOccurs="0"/>
+          <xs:element name="caseUpdPlanPerd" type="xs:short" minOccurs="0"/>
+          <xs:element name="chronosTimeFlag" type="xs:string" minOccurs="0"/>
+          <xs:element name="clerksName" type="xs:string" minOccurs="0"/>
+          <xs:element name="confChronoBanner" type="xs:string" minOccurs="0"/>
+          <xs:element name="deputyClerksName" type="xs:string" minOccurs="0"/>
+          <xs:element name="detnCost" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="district" type="district:circuitDistrict" minOccurs="0"/>
+          <xs:element name="districtType" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugTestModel" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugTestStart" type="xs:string" minOccurs="0"/>
+          <xs:element name="googleApiKey" type="xs:string" minOccurs="0"/>
+          <xs:element name="highProfile" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="inetProxyPort" type="xs:string" minOccurs="0"/>
+          <xs:element name="inetProxyServer" type="xs:string" minOccurs="0"/>
+          <xs:element name="mapsFeatureFlag" type="xs:string" minOccurs="0"/>
+          <xs:element name="mapsProvClientsFlag" type="xs:string" minOccurs="0"/>
+          <xs:element name="maxPhasesPerDay" type="xs:string" minOccurs="0"/>
+          <xs:element name="mono109ImplmtDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="mono111ImplmtDt" type="xs:string" minOccurs="0"/>
+          <xs:element name="mpartMaxMemSize" type="xs:string" minOccurs="0"/>
+          <xs:element name="mpartMaxReqSize" type="xs:string" minOccurs="0"/>
+          <xs:element name="mpartTmpDir" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="opmWorkYear" type="xs:string" minOccurs="0"/>
+          <xs:element name="pcCountOnHand" type="xs:string" minOccurs="0"/>
+          <xs:element name="pcaseIntChrInst" type="xs:string" minOccurs="0"/>
+          <xs:element name="pcaseIntPlnPerd" type="xs:short" minOccurs="0"/>
+          <xs:element name="pcaseUpdChrInst" type="xs:string" minOccurs="0"/>
+          <xs:element name="pcaseUpdPlnPerd" type="xs:short" minOccurs="0"/>
+          <xs:element name="probOffices" type="xs:short" minOccurs="0"/>
+          <xs:element name="probRecordRet" type="xs:string" minOccurs="0"/>
+          <xs:element name="psiDiscDueNumDays" type="xs:short" minOccurs="0"/>
+          <xs:element name="psiDueCourtNumDays" type="xs:short" minOccurs="0"/>
+          <xs:element name="psiDueSentOrAssign" type="xs:string" minOccurs="0"/>
+          <xs:element name="psiDueSuspoNumDays" type="xs:short" minOccurs="0"/>
+          <xs:element name="ptsOffices" type="xs:short" minOccurs="0"/>
+          <xs:element name="ptsRecordRet" type="xs:string" minOccurs="0"/>
+          <xs:element name="ptsSupvMonImp" type="xs:string" minOccurs="0"/>
+          <xs:element name="rpiStartDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="smtpServer" type="xs:string" minOccurs="0"/>
+          <xs:element name="timeZoneName" type="xs:string" minOccurs="0"/>
+          <xs:element name="useCannedText" type="xs:string" minOccurs="0"/>
+          <xs:element name="vccaLive" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="localCircuitDistrictName">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for localCircuitDistrictName complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="localCircuitDistrictName">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="abbreviation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="abbreviation" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="location">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for location complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="location">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="officeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="officeAddress">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for officeAddress complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="officeAddress">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="address1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="address2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="attention" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="beeper" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="city" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://gov/usc/codex/pacts/district}officeAddressPK" minOccurs="0"/>
+&lt;element name="infowebCyRefno" type="{http://www.w3.org/2001/XMLSchema}int"/>
+&lt;element name="latitude" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="longitude" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="mailingAddress1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="mailingAddress2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="mailingAddress3" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="mailingAddress4" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="mailingAddress5" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="mailingAddress6" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="oldDiscRulesId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+&lt;element name="oriNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="state" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="zip" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="address1" type="xs:string" minOccurs="0"/>
+          <xs:element name="address2" type="xs:string" minOccurs="0"/>
+          <xs:element name="attention" type="xs:string" minOccurs="0"/>
+          <xs:element name="beeper" type="xs:string" minOccurs="0"/>
+          <xs:element name="city" type="xs:string" minOccurs="0"/>
+          <xs:element name="email" type="xs:string" minOccurs="0"/>
+          <xs:element name="fax" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="district:officeAddressPK" minOccurs="0"/>
+          <xs:element name="infowebCyRefno" type="xs:string" minOccurs="1"/>
+          <xs:element name="latitude" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="longitude" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="mailingAddress1" type="xs:string" minOccurs="0"/>
+          <xs:element name="mailingAddress2" type="xs:string" minOccurs="0"/>
+          <xs:element name="mailingAddress3" type="xs:string" minOccurs="0"/>
+          <xs:element name="mailingAddress4" type="xs:string" minOccurs="0"/>
+          <xs:element name="mailingAddress5" type="xs:string" minOccurs="0"/>
+          <xs:element name="mailingAddress6" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldDiscRulesId" type="xs:string" minOccurs="1"/>
+          <xs:element name="oriNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0"/>
+          <xs:element name="state" type="xs:string" minOccurs="0"/>
+          <xs:element name="zip" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="officeAddressPK">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for officeAddressPK complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="officeAddressPK">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="officeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officeNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="probOrPreTrial" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="officeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="officeNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="probOrPreTrial" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleStaff">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleStaff complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleStaff">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/district}simpleStaffBase">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="district:simpleStaffBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleStaffAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleStaffAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleStaffAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/district}simpleStaffBase">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="district:simpleStaffBase">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleStaffBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleStaffBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleStaffBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="alwaysShow" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="atlasLogin" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="atlasPasswd" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="badgeNo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="beeper" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="locCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="managerStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="middleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="natid" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="probOrPreTrial" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="referralAgent" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="staffDesc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="staffFuncType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="staffInitials" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="staffTypeCd" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="submitBailReportNotification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="submitDateChgNotification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="submitDateInitNotification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="verifFormChgNotification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="pcExpirationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="raAclId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="alwaysShow" type="xs:string" minOccurs="0"/>
+          <xs:element name="atlasLogin" type="xs:string" minOccurs="0"/>
+          <xs:element name="atlasPasswd" type="xs:string" minOccurs="0"/>
+          <xs:element name="badgeNo" type="xs:string" minOccurs="0"/>
+          <xs:element name="beeper" type="xs:string" minOccurs="0"/>
+          <xs:element name="email" type="xs:string" minOccurs="0"/>
+          <xs:element name="fax" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="locCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="managerStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="natid" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone1" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone2" type="xs:string" minOccurs="0"/>
+          <xs:element name="probOrPreTrial" type="xs:string" minOccurs="0"/>
+          <xs:element name="referralAgent" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffDesc" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffFuncType" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffInitials" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffTypeCd" type="xs:string" minOccurs="0"/>
+          <xs:element name="submitBailReportNotification" type="xs:string" minOccurs="0"/>
+          <xs:element name="submitDateChgNotification" type="xs:string" minOccurs="0"/>
+          <xs:element name="submitDateInitNotification" type="xs:string" minOccurs="0"/>
+          <xs:element name="title" type="xs:string" minOccurs="0"/>
+          <xs:element name="verifFormChgNotification" type="xs:string" minOccurs="0"/>
+          <xs:element name="pcExpirationDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="raAclId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleStaffWithLocation">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleStaffWithLocation complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleStaffWithLocation">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/district}simpleStaffBase">
+&lt;sequence>
+&lt;element name="location" type="{http://gov/usc/codex/pacts/district}location" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="district:simpleStaffBase">
+        <xs:sequence>
+          <xs:element name="location" type="district:location" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleStaffWithLocationAndType">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleStaffWithLocationAndType complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleStaffWithLocationAndType">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/district}simpleStaffBase">
+&lt;sequence>
+&lt;element name="location" type="{http://gov/usc/codex/pacts/district}location" minOccurs="0"/>
+&lt;element name="staffType" type="{http://gov/usc/codex/pacts/reftype}staffType" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="district:simpleStaffBase">
+        <xs:sequence>
+          <xs:element name="location" type="district:location" minOccurs="0"/>
+          <xs:element name="staffType" type="reftype:staffType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleStaffWithSupervisor">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleStaffWithSupervisor complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleStaffWithSupervisor">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/district}simpleStaffBase">
+&lt;sequence>
+&lt;element name="supervisor" type="{http://gov/usc/codex/pacts/district}staffRelated" minOccurs="0"/>
+&lt;element name="supervisorId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="district:simpleStaffBase">
+        <xs:sequence>
+          <xs:element name="supervisor" type="district:staffRelated" minOccurs="0"/>
+          <xs:element name="supervisorId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="staff">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for staff complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="staff">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/district}staffBase">
+&lt;sequence>
+&lt;element name="subordinates" type="{http://gov/usc/codex/pacts/district}staff" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="supervisor" type="{http://gov/usc/codex/pacts/district}staffRelated" minOccurs="0"/>
+&lt;element name="supervisorId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="district:staffBase">
+        <xs:sequence>
+          <xs:element name="subordinates" type="district:staff" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="supervisor" type="district:staffRelated" minOccurs="0"/>
+          <xs:element name="supervisorId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="staffBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for staffBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="staffBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="alwaysShow" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="atlasLogin" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="atlasPasswd" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="badgeNo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="beeper" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="locCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="location" type="{http://gov/usc/codex/pacts/district}location" minOccurs="0"/>
+&lt;element name="managerStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="middleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="natid" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="probOrPreTrial" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="referralAgent" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="staffDesc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="staffFuncType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="staffInitials" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="staffType" type="{http://gov/usc/codex/pacts/reftype}staffType" minOccurs="0"/>
+&lt;element name="staffTypeCd" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="submitBailReportNotification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="submitDateChgNotification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="submitDateInitNotification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="verifFormChgNotification" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="alwaysShow" type="xs:string" minOccurs="0"/>
+          <xs:element name="atlasLogin" type="xs:string" minOccurs="0"/>
+          <xs:element name="atlasPasswd" type="xs:string" minOccurs="0"/>
+          <xs:element name="badgeNo" type="xs:string" minOccurs="0"/>
+          <xs:element name="beeper" type="xs:string" minOccurs="0"/>
+          <xs:element name="email" type="xs:string" minOccurs="0"/>
+          <xs:element name="fax" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="locCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="location" type="district:location" minOccurs="0"/>
+          <xs:element name="managerStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="natid" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone1" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone2" type="xs:string" minOccurs="0"/>
+          <xs:element name="probOrPreTrial" type="xs:string" minOccurs="0"/>
+          <xs:element name="referralAgent" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffDesc" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffFuncType" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffInitials" type="xs:string" minOccurs="0"/>
+          <xs:element name="staffType" type="reftype:staffType" minOccurs="0"/>
+          <xs:element name="staffTypeCd" type="xs:string" minOccurs="0"/>
+          <xs:element name="submitBailReportNotification" type="xs:string" minOccurs="0"/>
+          <xs:element name="submitDateChgNotification" type="xs:string" minOccurs="0"/>
+          <xs:element name="submitDateInitNotification" type="xs:string" minOccurs="0"/>
+          <xs:element name="title" type="xs:string" minOccurs="0"/>
+          <xs:element name="verifFormChgNotification" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="staffRelated">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for staffRelated complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="staffRelated">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/district}staffBase">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="district:staffBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="timezone">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for timezone complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="timezone">
+&lt;complexContent>
+&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+&lt;sequence>
+&lt;/sequence>
+&lt;/restriction>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+  </xs:complexType>
+  <xs:complexType name="tzDate">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for tzDate complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="tzDate">
+&lt;complexContent>
+&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+&lt;sequence>
+&lt;/sequence>
+&lt;/restriction>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+  </xs:complexType>
+</xs:schema>

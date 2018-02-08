@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/offender/payment" xmlns:core="http://gov/usc/codex/core" xmlns:offenderpayment="http://gov/usc/codex/offender/payment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:complexType name="clientCase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for clientCase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="clientCase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="marshallNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="partyNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="accountCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="partyCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="uidy" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="lcdId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="marshallNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="partyNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="accountCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="partyCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="uidy" type="xs:string" minOccurs="0"/>
+          <xs:element name="lcdId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="clientCaseAccount">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for clientCaseAccount complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="clientCaseAccount">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="marshallNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="ssn" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dob" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="partyNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="accountCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="partyCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="uidy" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="lcdId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="marshallNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="ssn" type="xs:string" minOccurs="0"/>
+          <xs:element name="dob" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="partyNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="accountCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="partyCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="uidy" type="xs:string" minOccurs="0"/>
+          <xs:element name="lcdId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="clientCaseInfo">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for clientCaseInfo complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="clientCaseInfo">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="partyNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="accountCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="partyCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="closedAccountFlag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="transferTypeFlag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="transferCourt" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="partyNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="accountCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="partyCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="closedAccountFlag" type="xs:string" minOccurs="0"/>
+          <xs:element name="comment" type="xs:string" minOccurs="0"/>
+          <xs:element name="transferTypeFlag" type="xs:string" minOccurs="0"/>
+          <xs:element name="transferCourt" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="clientCaseSearch">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for clientCaseSearch complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="clientCaseSearch">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="registerNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="district" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="ssn" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="registerNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="district" type="xs:string" minOccurs="0"/>
+          <xs:element name="ssn" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="debtBalance">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for debtBalance complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="debtBalance">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="partyNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="debtName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="totalOwedAmount" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="totalCollectedAmount" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="totalOutstandingAmount" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="uidy" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="interestFlag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="debtLineComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="accountNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="partyNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="debtName" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalOwedAmount" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalCollectedAmount" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalOutstandingAmount" type="xs:string" minOccurs="0"/>
+          <xs:element name="uidy" type="xs:string" minOccurs="0"/>
+          <xs:element name="interestFlag" type="xs:string" minOccurs="0"/>
+          <xs:element name="debtLineComment" type="xs:string" minOccurs="0"/>
+          <xs:element name="accountNumber" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="districtOffice">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for districtOffice complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="districtOffice">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="officeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="officeName" type="xs:string" minOccurs="0"/>
+          <xs:element name="officeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaAllDistrict">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaAllDistrict complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaAllDistrict">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="districtAbbreviation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="districtCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="displayName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="districtAbbreviation" type="xs:string" minOccurs="0"/>
+          <xs:element name="districtCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaCaseReport">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaCaseReport complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaCaseReport">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="districtAbbreviation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fieldName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="invalidData" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="districtAbbreviation" type="xs:string" minOccurs="0"/>
+          <xs:element name="fieldName" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="invalidData" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaDistrict">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaDistrict complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaDistrict">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="districtAbbreviation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="districtCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="displayName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="districtAbbreviation" type="xs:string" minOccurs="0"/>
+          <xs:element name="districtCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaDistrictId">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaDistrictId complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaDistrictId">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="lcdId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="lcdId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaIsLoadedDistrict">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaIsLoadedDistrict complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaIsLoadedDistrict">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="districtAbbreviation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="districtAbbreviation" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaLastLoadDate">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaLastLoadDate complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaLastLoadDate">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="loadStartDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="loadStartDate" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaLastUpdatedDate">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaLastUpdatedDate complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaLastUpdatedDate">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="officeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="officeName" type="xs:string" minOccurs="0"/>
+          <xs:element name="officeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="date" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaMarshalReport">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaMarshalReport complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaMarshalReport">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="accountNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseYear" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="usmsError" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="usmsRsn" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="accountNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseYear" type="xs:string" minOccurs="0"/>
+          <xs:element name="usmsError" type="xs:string" minOccurs="0"/>
+          <xs:element name="usmsRsn" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaMarshalReportSummary">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaMarshalReportSummary complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaMarshalReportSummary">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="erroneousData" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="count" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="yearlyPercentage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="erroneousData" type="xs:string" minOccurs="0"/>
+          <xs:element name="count" type="xs:string" minOccurs="0"/>
+          <xs:element name="yearlyPercentage" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaSsnReport">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaSsnReport complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaSsnReport">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseYear" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="ssnError" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseYear" type="xs:string" minOccurs="0"/>
+          <xs:element name="ssnError" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="operaSsnReportSummary">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for operaSsnReportSummary complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="operaSsnReportSummary">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="districtAbbreviation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="erroneousData" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="count" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="yearlyPercentage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="districtAbbreviation" type="xs:string" minOccurs="0"/>
+          <xs:element name="erroneousData" type="xs:string" minOccurs="0"/>
+          <xs:element name="count" type="xs:string" minOccurs="0"/>
+          <xs:element name="yearlyPercentage" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="payeeBalance">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for payeeBalance complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="payeeBalance">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="paye_cd" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="totalOwedAmount" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="totalPaidAmount" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="totalOutstandingAmount" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="nameAppend" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="paye_cd" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalOwedAmount" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalPaidAmount" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalOutstandingAmount" type="xs:string" minOccurs="0"/>
+          <xs:element name="nameAppend" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="paymentHistory">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for paymentHistory complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="paymentHistory">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="caseTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="partyNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="debtName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fundCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="totalOwedAmount" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="totalOutstandingAmount" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docTypeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="subt_modf" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docLineId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="postingOrder" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="partyAddrCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="partyCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="vendorName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="maxDocDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dollarSum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="accountNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="caseTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="partyNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="debtName" type="xs:string" minOccurs="0"/>
+          <xs:element name="fundCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalOwedAmount" type="xs:string" minOccurs="0"/>
+          <xs:element name="totalOutstandingAmount" type="xs:string" minOccurs="0"/>
+          <xs:element name="docTypeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="docNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="subt_modf" type="xs:string" minOccurs="0"/>
+          <xs:element name="docLineId" type="xs:string" minOccurs="0"/>
+          <xs:element name="postingOrder" type="xs:string" minOccurs="0"/>
+          <xs:element name="partyAddrCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="partyCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="vendorName" type="xs:string" minOccurs="0"/>
+          <xs:element name="maxDocDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="dollarSum" type="xs:string" minOccurs="0"/>
+          <xs:element name="docName" type="xs:string" minOccurs="0"/>
+          <xs:element name="accountNumber" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="transactionHistory">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for transactionHistory complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="transactionHistory">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="docTypeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="acmp_date" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dollarAmount" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docAction" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="oplk" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="addressName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="tt" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fundId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="accountNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="debtName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dbty_ln_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="paye_ln_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dpst_ln_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="subt_modf" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="payeeLineNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="docTypeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="docNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="docDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="acmp_date" type="xs:string" minOccurs="0"/>
+          <xs:element name="dollarAmount" type="xs:string" minOccurs="0"/>
+          <xs:element name="docAction" type="xs:string" minOccurs="0"/>
+          <xs:element name="oplk" type="xs:string" minOccurs="0"/>
+          <xs:element name="addressName" type="xs:string" minOccurs="0"/>
+          <xs:element name="tt" type="xs:string" minOccurs="0"/>
+          <xs:element name="fundId" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="accountNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="debtName" type="xs:string" minOccurs="0"/>
+          <xs:element name="dbty_ln_id" type="xs:string" minOccurs="0"/>
+          <xs:element name="paye_ln_id" type="xs:string" minOccurs="0"/>
+          <xs:element name="dpst_ln_id" type="xs:string" minOccurs="0"/>
+          <xs:element name="subt_modf" type="xs:string" minOccurs="0"/>
+          <xs:element name="payeeLineNumber" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

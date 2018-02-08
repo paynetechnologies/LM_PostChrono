@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/chronos" xmlns:client="http://gov/usc/codex/pacts/client" xmlns:core="http://gov/usc/codex/core" xmlns:chronos="http://gov/usc/codex/pacts/chronos" xmlns:reftype="http://gov/usc/codex/pacts/reftype" xmlns:district="http://gov/usc/codex/pacts/district" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/pacts/client" schemaLocation="client.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/reftype" schemaLocation="reftype.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/district" schemaLocation="district.xsd"/>
+  <xs:element name="chronos" type="chronos:chronos"/>
+  <xs:element name="chronosCollection" type="chronos:chronosCollection"/>
+  <xs:element name="chronosContact" type="chronos:chronosContact"/>
+  <xs:element name="chronosContactCollection" type="chronos:chronosContactCollection"/>
+  <xs:complexType name="chronos">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for chronos complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="chronos">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="attempted" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="author" type="{http://gov/usc/codex/pacts/district}staff" minOccurs="0"/>
+&lt;element name="authorCode" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="chronosContacts" type="{http://gov/usc/codex/pacts/chronos}chronosContact" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="chronosNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="chronosStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="confidential" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="contactDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="contactTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="noncompliance" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="planChange" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="probPts" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="respNoncompliance" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="thirdPartyRisk" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="attempted" type="xs:string" minOccurs="0"/>
+          <xs:element name="author" type="district:staff" minOccurs="0"/>
+          <xs:element name="authorCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="chronosContacts" type="chronos:chronosContact" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="chronosNotes" type="xs:string" minOccurs="0"/>
+          <xs:element name="chronosStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="confidential" type="xs:string" minOccurs="0"/>
+          <xs:element name="contactDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="contactTime" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="noncompliance" type="xs:string" minOccurs="0"/>
+          <xs:element name="planChange" type="xs:string" minOccurs="0"/>
+          <xs:element name="probPts" type="xs:string" minOccurs="0"/>
+          <xs:element name="respNoncompliance" type="xs:string" minOccurs="0"/>
+          <xs:element name="thirdPartyRisk" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="chronosCollection">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for chronosCollection complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="chronosCollection">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="chronosItem" type="{http://gov/usc/codex/pacts/chronos}chronos" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="chronosItem" type="chronos:chronos" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="chronosContact">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for chronosContact complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="chronosContact">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="chronosContactCode" type="{http://gov/usc/codex/pacts/chronos}chronosContactCode" minOccurs="0"/>
+&lt;element name="chronosContactCodeId" type="{http://gov/usc/codex/pacts/chronos}chronosContactCodePK" minOccurs="0"/>
+&lt;element name="id" type="{http://gov/usc/codex/pacts/chronos}chronosContactPK" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="chronosContactCode" type="chronos:chronosContactCode" minOccurs="0"/>
+          <xs:element name="chronosContactCodeId" type="chronos:chronosContactCodePK" minOccurs="0"/>
+          <xs:element name="id" type="chronos:chronosContactPK" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="chronosContactCode">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for chronosContactCode complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="chronosContactCode">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="active" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="alwaysShow" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="chronosCategoryCode" type="{http://gov/usc/codex/pacts/reftype}chronosCategoryCode" minOccurs="0"/>
+&lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://gov/usc/codex/pacts/chronos}chronosContactCodePK" minOccurs="0"/>
+&lt;element name="probPts" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="active" type="xs:string" minOccurs="0"/>
+          <xs:element name="alwaysShow" type="xs:string" minOccurs="0"/>
+          <xs:element name="chronosCategoryCode" type="reftype:chronosCategoryCode" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="chronos:chronosContactCodePK" minOccurs="0"/>
+          <xs:element name="probPts" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="chronosContactCodePK">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for chronosContactCodePK complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="chronosContactCodePK">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="chronosCategoryCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="probPts" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="chronosCategoryCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="probPts" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="chronosContactCollection">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for chronosContactCollection complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="chronosContactCollection">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="chronosContactItem" type="{http://gov/usc/codex/pacts/chronos}chronosContact" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="chronosContactItem" type="chronos:chronosContact" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="chronosContactPK">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for chronosContactPK complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="chronosContactPK">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="chronos" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="chronosCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="probPts" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="chronos" type="xs:string" minOccurs="0"/>
+          <xs:element name="chronosCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="probPts" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="clientChronos">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for clientChronos complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="clientChronos">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/client}clientBase">
+&lt;sequence>
+&lt;element name="chronosCollection" type="{http://gov/usc/codex/pacts/chronos}chronos" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="client:clientBase">
+        <xs:sequence>
+          <xs:element name="chronosCollection" type="chronos:chronos" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

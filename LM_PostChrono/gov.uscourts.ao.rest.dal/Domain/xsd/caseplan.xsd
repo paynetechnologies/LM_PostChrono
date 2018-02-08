@@ -1,0 +1,2245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/caseplan" xmlns:caseplan="http://gov/usc/codex/pacts/caseplan" xmlns:docket="http://gov/usc/codex/pacts/docket" xmlns:client="http://gov/usc/codex/pacts/client" xmlns:core="http://gov/usc/codex/core" xmlns:postconviction="http://gov/usc/codex/pacts/postconviction" xmlns:employment="http://gov/usc/codex/pacts/employment" xmlns:chronos="http://gov/usc/codex/pacts/chronos" xmlns:reftype="http://gov/usc/codex/pacts/reftype" xmlns:district="http://gov/usc/codex/pacts/district" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/pacts/docket" schemaLocation="docket.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/client" schemaLocation="client.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/postconviction" schemaLocation="postconviction.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/employment" schemaLocation="employment.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/chronos" schemaLocation="chronos.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/reftype" schemaLocation="reftype.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/district" schemaLocation="district.xsd"/>
+  <xs:complexType name="assessment">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for assessment complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="assessment">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}assessmentBase">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:assessmentBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assessmentAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for assessmentAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="assessmentAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}assessment">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:assessment">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assessmentBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for assessmentBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="assessmentBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="assessGlossId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="assessGroupId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="sortValue" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="assessGlossId" type="xs:string" minOccurs="0"/>
+          <xs:element name="assessGroupId" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="sortValue" type="xs:short" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assessmentBasicData">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for assessmentBasicData complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="assessmentBasicData">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}assessmentBase">
+&lt;sequence>
+&lt;element name="assessmentGlossary" type="{http://gov/usc/codex/pacts/reftype}glossary" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:assessmentBase">
+        <xs:sequence>
+          <xs:element name="assessmentGlossary" type="reftype:glossary" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assessmentComplete">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for assessmentComplete complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="assessmentComplete">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}assessmentBasicData">
+&lt;sequence>
+&lt;element name="assessmentGroup" type="{http://gov/usc/codex/pacts/caseplan}assessmentGroup" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:assessmentBasicData">
+        <xs:sequence>
+          <xs:element name="assessmentGroup" type="caseplan:assessmentGroup" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assessmentGroup">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for assessmentGroup complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="assessmentGroup">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}assessmentGroupBase">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:assessmentGroupBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assessmentGroupAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for assessmentGroupAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="assessmentGroupAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}assessmentGroupBase">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:assessmentGroupBase">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assessmentGroupBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for assessmentGroupBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="assessmentGroupBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="sortValue" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="sortValue" type="xs:short" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assessmentGroupComplete">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for assessmentGroupComplete complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="assessmentGroupComplete">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}assessmentGroupBase">
+&lt;sequence>
+&lt;element name="assessments" type="{http://gov/usc/codex/pacts/caseplan}assessmentBasicData" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:assessmentGroupBase">
+        <xs:sequence>
+          <xs:element name="assessments" type="caseplan:assessmentBasicData" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplan">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplan complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplan">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanBase">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanAssessment">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanAssessment complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanAssessment">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanAssessmentBase">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanAssessmentBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanAssessmentAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanAssessmentAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanAssessmentAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanAssessment">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanAssessment">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanAssessmentBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanAssessmentBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanAssessmentBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="assessId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="notes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="assessId" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="notes" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanAssessmentComplete">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanAssessmentComplete complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanAssessmentComplete">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanAssessmentBase">
+&lt;sequence>
+&lt;element name="caseplanAssessments" type="{http://gov/usc/codex/pacts/caseplan}assessmentComplete" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanAssessmentBase">
+        <xs:sequence>
+          <xs:element name="caseplanAssessments" type="caseplan:assessmentComplete" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanAssessmentGroupComments">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanAssessmentGroupComments complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanAssessmentGroupComments">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanAssessmentGroupCommentsBase">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanAssessmentGroupCommentsBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanAssessmentGroupCommentsAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanAssessmentGroupCommentsAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanAssessmentGroupCommentsAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanAssessmentGroupComments">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanAssessmentGroupComments">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanAssessmentGroupCommentsBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanAssessmentGroupCommentsBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanAssessmentGroupCommentsBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="assessGroupId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="comments" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="assessGroupId" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="comments" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="approveById" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="approveBy" type="{http://gov/usc/codex/pacts/district}staff" minOccurs="0"/>
+&lt;element name="approveDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="caseplanNumber" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="closingComments" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="closingSummaryType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="conditionNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="employSummaryId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="endDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="endSuperDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="fromDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="monthlySalary" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="oldNextStaffDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="planDueDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="planFocus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="profileId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="rpiId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="rpiScore" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="submitById" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="submitBy" type="{http://gov/usc/codex/pacts/district}staff" minOccurs="0"/>
+&lt;element name="submitDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="tcuScore" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="client" type="{http://gov/usc/codex/pacts/client}clientBase" minOccurs="0"/>
+&lt;element name="chronos" type="{http://gov/usc/codex/pacts/chronos}chronos" minOccurs="0"/>
+&lt;element name="employSummary" type="{http://gov/usc/codex/pacts/caseplan}employSummary" minOccurs="0"/>
+&lt;element name="rpiInfo" type="{http://gov/usc/codex/pacts/caseplan}caseplanRPI" minOccurs="0"/>
+&lt;element name="profile" type="{http://gov/usc/codex/pacts/client}clientProfile" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="approveById" type="xs:string" minOccurs="0"/>
+          <xs:element name="approveBy" type="district:staff" minOccurs="0"/>
+          <xs:element name="approveDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseplanNumber" type="xs:short" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="closingComments" type="xs:string" minOccurs="0"/>
+          <xs:element name="closingSummaryType" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionNotes" type="xs:string" minOccurs="0"/>
+          <xs:element name="employSummaryId" type="xs:string" minOccurs="0"/>
+          <xs:element name="endDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="endSuperDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="fromDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="monthlySalary" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="oldNextStaffDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="planDueDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="planFocus" type="xs:string" minOccurs="0"/>
+          <xs:element name="profileId" type="xs:string" minOccurs="0"/>
+          <xs:element name="rpiId" type="xs:string" minOccurs="0"/>
+          <xs:element name="rpiScore" type="xs:short" minOccurs="0"/>
+          <xs:element name="submitById" type="xs:string" minOccurs="0"/>
+          <xs:element name="submitBy" type="district:staff" minOccurs="0"/>
+          <xs:element name="submitDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="tcuScore" type="xs:string" minOccurs="0"/>
+          <xs:element name="client" type="client:clientBase" minOccurs="0"/>
+          <xs:element name="chronos" type="chronos:chronos" minOccurs="0"/>
+          <xs:element name="employSummary" type="caseplan:employSummary" minOccurs="0"/>
+          <xs:element name="rpiInfo" type="caseplan:caseplanRPI" minOccurs="0"/>
+          <xs:element name="profile" type="client:clientProfile" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanBasicInformation">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanBasicInformation complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanBasicInformation">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanBase">
+&lt;sequence>
+&lt;element name="caseplanNoncomply" type="{http://gov/usc/codex/pacts/caseplan}caseplanNoncomply" minOccurs="0"/>
+&lt;element name="caseplanHistorical" type="{http://gov/usc/codex/pacts/caseplan}caseplanHistorical" minOccurs="0"/>
+&lt;element name="caseplanStatReqs" type="{http://gov/usc/codex/pacts/caseplan}caseplanStatReqs" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanBase">
+        <xs:sequence>
+          <xs:element name="caseplanNoncomply" type="caseplan:caseplanNoncomply" minOccurs="0"/>
+          <xs:element name="caseplanHistorical" type="caseplan:caseplanHistorical" minOccurs="0"/>
+          <xs:element name="caseplanStatReqs" type="caseplan:caseplanStatReqs" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanCondition">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanCondition complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanCondition">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="amountDue" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountImposed" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountSatisfied" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountScheduled" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="balance" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="byDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="conditionId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="conditionStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="conditionStatus" type="{http://gov/usc/codex/pacts/reftype}condStatus" minOccurs="0"/>
+&lt;element name="conditionTypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="conditionType" type="{http://gov/usc/codex/pacts/reftype}conditionType" minOccurs="0"/>
+&lt;element name="copay" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dateImposed" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="imposedBy" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="locMonitorProgramId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="locMonitorProgram" type="{http://gov/usc/codex/pacts/reftype}locationMonitorProgram" minOccurs="0"/>
+&lt;element name="monitorMethodId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="monitorMethod" type="{http://gov/usc/codex/pacts/reftype}monitorMethod" minOccurs="0"/>
+&lt;element name="nteTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="paymentStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="paymentStatus" type="{http://gov/usc/codex/pacts/caseplan}caseplanPaymentStatus" minOccurs="0"/>
+&lt;element name="percentMeasure" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="percentPay" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="schedulePeriod" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="statusDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="unitOfMeasureId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="unitOfMeasure" type="{http://gov/usc/codex/pacts/reftype}unitOfMeasure" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="amountDue" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountImposed" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountSatisfied" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountScheduled" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="balance" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="byDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionStatus" type="reftype:condStatus" minOccurs="0"/>
+          <xs:element name="conditionTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionType" type="reftype:conditionType" minOccurs="0"/>
+          <xs:element name="copay" type="xs:string" minOccurs="0"/>
+          <xs:element name="dateImposed" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="imposedBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="locMonitorProgramId" type="xs:string" minOccurs="0"/>
+          <xs:element name="locMonitorProgram" type="reftype:locationMonitorProgram" minOccurs="0"/>
+          <xs:element name="monitorMethodId" type="xs:string" minOccurs="0"/>
+          <xs:element name="monitorMethod" type="reftype:monitorMethod" minOccurs="0"/>
+          <xs:element name="nteTime" type="xs:string" minOccurs="0"/>
+          <xs:element name="paymentStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="paymentStatus" type="caseplan:caseplanPaymentStatus" minOccurs="0"/>
+          <xs:element name="percentMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="percentPay" type="xs:short" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="schedulePeriod" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="unitOfMeasureId" type="xs:string" minOccurs="0"/>
+          <xs:element name="unitOfMeasure" type="reftype:unitOfMeasure" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanConditionAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanConditionAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanConditionAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanConditionBase">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanConditionBase">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanConditionBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanConditionBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanConditionBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="amountDue" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountImposed" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountSatisfied" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="amountScheduled" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="balance" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="byDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="caseNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="conditionId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="conditionStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="conditionTypeId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="copay" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="dateImposed" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="imposedBy" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="locMonitorProgramId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="monitorMethodId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="nteTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="paymentStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="percentMeasure" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="percentPay" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="schedulePeriod" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="statusDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="unitOfMeasureId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="amountDue" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountImposed" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountSatisfied" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="amountScheduled" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="balance" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="byDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="conditionTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="copay" type="xs:string" minOccurs="0"/>
+          <xs:element name="dateImposed" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="imposedBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="locMonitorProgramId" type="xs:string" minOccurs="0"/>
+          <xs:element name="monitorMethodId" type="xs:string" minOccurs="0"/>
+          <xs:element name="nteTime" type="xs:string" minOccurs="0"/>
+          <xs:element name="paymentStatusId" type="xs:string" minOccurs="0"/>
+          <xs:element name="percentMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="percentPay" type="xs:short" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="schedulePeriod" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="unitOfMeasureId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanDetailedInformation">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanDetailedInformation complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanDetailedInformation">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanBase">
+&lt;sequence>
+&lt;element name="caseplanNoncomply" type="{http://gov/usc/codex/pacts/caseplan}caseplanNoncomply" minOccurs="0"/>
+&lt;element name="caseplanHistorical" type="{http://gov/usc/codex/pacts/caseplan}caseplanHistorical" minOccurs="0"/>
+&lt;element name="caseplanStatReqs" type="{http://gov/usc/codex/pacts/caseplan}caseplanStatReqs" minOccurs="0"/>
+&lt;element name="caseplanConditions" type="{http://gov/usc/codex/pacts/caseplan}caseplanCondition" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="caseplanAssessments" type="{http://gov/usc/codex/pacts/caseplan}caseplanAssessment" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="caseplanGroupComments" type="{http://gov/usc/codex/pacts/caseplan}caseplanGroupComment" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="caseplanGroupRemarks" type="{http://gov/usc/codex/pacts/caseplan}caseplanGroupRemark" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="caseplanPlanItems" type="{http://gov/usc/codex/pacts/caseplan}caseplanPlanItem" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="caseplanOtherObjectives" type="{http://gov/usc/codex/pacts/caseplan}caseplanOtherObjective" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="caseplanServiceProviders" type="{http://gov/usc/codex/pacts/caseplan}caseplanServiceProvider" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="endProfileTreatmentPrograms" type="{http://gov/usc/codex/pacts/caseplan}endProfileTreatmentProgram" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanBase">
+        <xs:sequence>
+          <xs:element name="caseplanNoncomply" type="caseplan:caseplanNoncomply" minOccurs="0"/>
+          <xs:element name="caseplanHistorical" type="caseplan:caseplanHistorical" minOccurs="0"/>
+          <xs:element name="caseplanStatReqs" type="caseplan:caseplanStatReqs" minOccurs="0"/>
+          <xs:element name="caseplanConditions" type="caseplan:caseplanCondition" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="caseplanAssessments" type="caseplan:caseplanAssessment" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="caseplanGroupComments" type="caseplan:caseplanGroupComment" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="caseplanGroupRemarks" type="caseplan:caseplanGroupRemark" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="caseplanPlanItems" type="caseplan:caseplanPlanItem" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="caseplanOtherObjectives" type="caseplan:caseplanOtherObjective" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="caseplanServiceProviders" type="caseplan:caseplanServiceProvider" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="endProfileTreatmentPrograms" type="caseplan:endProfileTreatmentProgram" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanGroupComment">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanGroupComment complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanGroupComment">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="assessGroupId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="comments" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="sortValue" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="assessGroupId" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="comments" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="sortValue" type="xs:short" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanGroupRemark">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanGroupRemark complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanGroupRemark">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="comments" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="planGroup" type="{http://gov/usc/codex/pacts/caseplan}planGroup" minOccurs="0"/>
+&lt;element name="id" type="{http://gov/usc/codex/pacts/caseplan}caseplanGroupRemarkPK" minOccurs="0"/>
+&lt;element name="sortValue" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="comments" type="xs:string" minOccurs="0"/>
+          <xs:element name="planGroup" type="caseplan:planGroup" minOccurs="0"/>
+          <xs:element name="id" type="caseplan:caseplanGroupRemarkPK" minOccurs="0"/>
+          <xs:element name="sortValue" type="xs:short" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanGroupRemarkPK">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanGroupRemarkPK complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanGroupRemarkPK">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="groupId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="groupId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanHistorical">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanHistorical complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanHistorical">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="citationId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="citation" type="{http://gov/usc/codex/pacts/docket}citation" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="supervisionId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="supervisionTypeDesc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="termEndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="termLength" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="termMeasure" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="termStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="citationId" type="xs:string" minOccurs="0"/>
+          <xs:element name="citation" type="docket:citation" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionTypeDesc" type="xs:string" minOccurs="0"/>
+          <xs:element name="termEndDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="termLength" type="xs:string" minOccurs="0"/>
+          <xs:element name="termMeasure" type="xs:string" minOccurs="0"/>
+          <xs:element name="termStartDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanNoncomply">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanNoncomply complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanNoncomply">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="arrested" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="chargeInfo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="otherNoncomply" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="positiveDrugTest" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="arrested" type="xs:string" minOccurs="0"/>
+          <xs:element name="chargeInfo" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherNoncomply" type="xs:string" minOccurs="0"/>
+          <xs:element name="positiveDrugTest" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanOtherObjective">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanOtherObjective complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanOtherObjective">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://gov/usc/codex/pacts/caseplan}caseplanOtherObjectivePK" minOccurs="0"/>
+&lt;element name="otherObjectiveId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="otherObjective" type="{http://gov/usc/codex/pacts/reftype}otherObjective" minOccurs="0"/>
+&lt;element name="planGroupId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="planGroup" type="{http://gov/usc/codex/pacts/caseplan}planGroup" minOccurs="0"/>
+&lt;element name="progressId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="progress" type="{http://gov/usc/codex/pacts/reftype}progress" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="caseplan:caseplanOtherObjectivePK" minOccurs="0"/>
+          <xs:element name="otherObjectiveId" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherObjective" type="reftype:otherObjective" minOccurs="0"/>
+          <xs:element name="planGroupId" type="xs:string" minOccurs="0"/>
+          <xs:element name="planGroup" type="caseplan:planGroup" minOccurs="0"/>
+          <xs:element name="progressId" type="xs:string" minOccurs="0"/>
+          <xs:element name="progress" type="reftype:progress" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanOtherObjectivePK">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanOtherObjectivePK complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanOtherObjectivePK">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="otherObjectiveId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="planGroupId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherObjectiveId" type="xs:string" minOccurs="0"/>
+          <xs:element name="planGroupId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanPaymentStatus">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanPaymentStatus complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanPaymentStatus">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="paystatGlossId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="paystatGloss" type="{http://gov/usc/codex/pacts/reftype}glossary" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="paystatGlossId" type="xs:string" minOccurs="0"/>
+          <xs:element name="paystatGloss" type="reftype:glossary" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanPlanItem">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanPlanItem complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanPlanItem">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://gov/usc/codex/pacts/caseplan}caseplanPlanItemPK" minOccurs="0"/>
+&lt;element name="oldItemId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="planGroupItemId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="planGroupItem" type="{http://gov/usc/codex/pacts/caseplan}planGroupItem" minOccurs="0"/>
+&lt;element name="progressId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="progress" type="{http://gov/usc/codex/pacts/reftype}progress" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="caseplan:caseplanPlanItemPK" minOccurs="0"/>
+          <xs:element name="oldItemId" type="xs:string" minOccurs="0"/>
+          <xs:element name="planGroupItemId" type="xs:string" minOccurs="0"/>
+          <xs:element name="planGroupItem" type="caseplan:planGroupItem" minOccurs="0"/>
+          <xs:element name="progressId" type="xs:string" minOccurs="0"/>
+          <xs:element name="progress" type="reftype:progress" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanPlanItemPK">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanPlanItemPK complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanPlanItemPK">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="planGroupItemId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="planGroupItemId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanRPI">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanRPI complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanRPI">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanRPIBase">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanRPIBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanRPIAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanRPIAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanRPIAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanRPIBase">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanRPIBase">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanRPIBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanRPIBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanRPIBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="ageStartSuper" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="college" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="drugs" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="employed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="livingFamily" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="numArrests" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="prevAbsconded" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="weaponUsed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="ageStartSuper" type="xs:short" minOccurs="0"/>
+          <xs:element name="college" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugs" type="xs:string" minOccurs="0"/>
+          <xs:element name="employed" type="xs:string" minOccurs="0"/>
+          <xs:element name="livingFamily" type="xs:string" minOccurs="0"/>
+          <xs:element name="numArrests" type="xs:short" minOccurs="0"/>
+          <xs:element name="prevAbsconded" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="weaponUsed" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanServiceProvider">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanServiceProvider complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanServiceProvider">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="copay" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="providerName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="serviceId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="copay" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="providerName" type="xs:string" minOccurs="0"/>
+          <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanStatReqs">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanStatReqs complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanStatReqs">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="dnaTakenDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="dnaTestReq" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="domCounselArea" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="domCounselDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="domCounselReq" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="drugMandatory" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="drugTestDate1" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="drugTestDate2" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="drugTestDate3" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="oldVccaReq" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="sexOffCurrent" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="sexOffNot" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="sexOffReq" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="sexOffOther" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="vccaNoticeDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="vccaNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="dnaTakenDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="dnaTestReq" type="xs:string" minOccurs="0"/>
+          <xs:element name="domCounselArea" type="xs:string" minOccurs="0"/>
+          <xs:element name="domCounselDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="domCounselReq" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugMandatory" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugTestDate1" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugTestDate2" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugTestDate3" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldVccaReq" type="xs:string" minOccurs="0"/>
+          <xs:element name="sexOffCurrent" type="xs:string" minOccurs="0"/>
+          <xs:element name="sexOffNot" type="xs:string" minOccurs="0"/>
+          <xs:element name="sexOffReq" type="xs:string" minOccurs="0"/>
+          <xs:element name="sexOffOther" type="xs:string" minOccurs="0"/>
+          <xs:element name="vccaNoticeDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="vccaNotes" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="caseplanStatusValue">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanStatusValue.
+<p>The following schema fragment specifies the expected content contained within this class.
+<p>
+<pre>
+&lt;simpleType name="caseplanStatusValue">
+&lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+&lt;enumeration value="draft"/>
+&lt;enumeration value="submit"/>
+&lt;enumeration value="approve"/>
+&lt;/restriction>
+&lt;/simpleType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="draft"/>
+      <xs:enumeration value="submit"/>
+      <xs:enumeration value="approve"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="caseplanStatutoryRequirements">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanStatutoryRequirements complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanStatutoryRequirements">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="dnaTakenDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="dnaTestReq" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="domCounselArea" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="domCounselDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="domCounselReq" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="drugMandatory" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="drugTestDate1" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="drugTestDate2" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="drugTestDate3" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="oldVccaReq" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="sexOffCurrent" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="sexOffNot" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="sexOffReq" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="sexOffOther" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="vccaNoticeDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="vccaNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="vccaRequired" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="dnaTakenDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="dnaTestReq" type="xs:string" minOccurs="0"/>
+          <xs:element name="domCounselArea" type="xs:string" minOccurs="0"/>
+          <xs:element name="domCounselDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="domCounselReq" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugMandatory" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugTestDate1" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugTestDate2" type="xs:string" minOccurs="0"/>
+          <xs:element name="drugTestDate3" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldVccaReq" type="xs:string" minOccurs="0"/>
+          <xs:element name="sexOffCurrent" type="xs:string" minOccurs="0"/>
+          <xs:element name="sexOffNot" type="xs:string" minOccurs="0"/>
+          <xs:element name="sexOffReq" type="xs:string" minOccurs="0"/>
+          <xs:element name="sexOffOther" type="xs:string" minOccurs="0"/>
+          <xs:element name="vccaNoticeDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="vccaNotes" type="xs:string" minOccurs="0"/>
+          <xs:element name="vccaRequired" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanStatutoryRequirementsAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanStatutoryRequirementsAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanStatutoryRequirementsAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}caseplanStatutoryRequirements">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:caseplanStatutoryRequirements">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanSupervision">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanSupervision complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanSupervision">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://gov/usc/codex/pacts/caseplan}caseplanSupervisionPK" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="caseplan:caseplanSupervisionPK" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="caseplanSupervisionPK">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for caseplanSupervisionPK complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="caseplanSupervisionPK">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="supervisionId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supervisionId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="employSummary">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for employSummary complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="employSummary">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="employEarnedIncome" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="employStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="excused" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="excusedDueTo" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="hoursPerWeek" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="otherExcused" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="otherIncome" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="selfEmployed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="summaryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="summaryType" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="underEmployed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="employEarnedIncome" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="employStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="excused" type="xs:string" minOccurs="0"/>
+          <xs:element name="excusedDueTo" type="xs:string" minOccurs="0"/>
+          <xs:element name="hoursPerWeek" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherExcused" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherIncome" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="selfEmployed" type="xs:string" minOccurs="0"/>
+          <xs:element name="summaryDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="summaryType" type="xs:string" minOccurs="0"/>
+          <xs:element name="underEmployed" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="endProfileTreatmentProgram">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for endProfileTreatmentProgram complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="endProfileTreatmentProgram">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="caseplanId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="contractProgram" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="endDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="pS" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="programId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="saptermCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="satermCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="startDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="caseplanId" type="xs:string" minOccurs="0"/>
+          <xs:element name="contractProgram" type="xs:string" minOccurs="0"/>
+          <xs:element name="endDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="pS" type="xs:string" minOccurs="0"/>
+          <xs:element name="programId" type="xs:string" minOccurs="0"/>
+          <xs:element name="saptermCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="satermCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="startDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="planGroup">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for planGroup complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="planGroup">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="planGroupGlossId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="planGroupGloss" type="{http://gov/usc/codex/pacts/reftype}glossary" minOccurs="0"/>
+&lt;element name="planGroupItems" type="{http://gov/usc/codex/pacts/caseplan}planGroupItem" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="sortValue" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="planGroupGlossId" type="xs:string" minOccurs="0"/>
+          <xs:element name="planGroupGloss" type="reftype:glossary" minOccurs="0"/>
+          <xs:element name="planGroupItems" type="caseplan:planGroupItem" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="sortValue" type="xs:short" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="planGroupItem">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for planGroupItem complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="planGroupItem">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="itemId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="oldDisplayFlag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="planItem" type="{http://gov/usc/codex/pacts/caseplan}planItem" minOccurs="0"/>
+&lt;element name="planGroupId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="sortValue" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="itemId" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldDisplayFlag" type="xs:string" minOccurs="0"/>
+          <xs:element name="planItem" type="caseplan:planItem" minOccurs="0"/>
+          <xs:element name="planGroupId" type="xs:string" minOccurs="0"/>
+          <xs:element name="sortValue" type="xs:short" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="planItem">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for planItem complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="planItem">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="itemType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="oldParentItemId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="itemType" type="xs:string" minOccurs="0"/>
+          <xs:element name="oldParentItemId" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplan">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplan complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplan">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplanBase">
+&lt;sequence>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplanBase"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplan">
+&lt;sequence>
+&lt;element name="caseplanRpiInfo" type="{http://gov/usc/codex/pacts/caseplan}caseplanRPIAudit" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplan">
+        <xs:sequence>
+          <xs:element name="caseplanRpiInfo" type="caseplan:caseplanRPIAudit" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="approveById" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="approveDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="caseplanNumber" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="caseplanStatusValue" type="{http://gov/usc/codex/pacts/caseplan}caseplanStatusValue"/>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+&lt;element name="employSummaryId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="endDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="endSuperDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="fromDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="planDueDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="planFocus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="profileId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="rpiId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="rpiScore" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+&lt;element name="submitById" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="submitDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="tcuScore" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="approveById" type="xs:string" minOccurs="0"/>
+          <xs:element name="approveDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="caseplanNumber" type="xs:short" minOccurs="0"/>
+          <xs:element name="caseplanStatusValue" type="caseplan:caseplanStatusValue" minOccurs="1"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="1"/>
+          <xs:element name="employSummaryId" type="xs:string" minOccurs="0"/>
+          <xs:element name="endDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="endSuperDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="fromDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="planDueDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="planFocus" type="xs:string" minOccurs="0"/>
+          <xs:element name="profileId" type="xs:string" minOccurs="0"/>
+          <xs:element name="rpiId" type="xs:string" minOccurs="0"/>
+          <xs:element name="rpiScore" type="xs:short" minOccurs="0"/>
+          <xs:element name="submitById" type="xs:string" minOccurs="0"/>
+          <xs:element name="submitDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="tcuScore" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanBasicAssessments">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanBasicAssessments complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanBasicAssessments">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplanBase">
+&lt;sequence>
+&lt;element name="caseplanAssessments" type="{http://gov/usc/codex/pacts/caseplan}caseplanAssessment" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="caseplanAssessmentGroupComments" type="{http://gov/usc/codex/pacts/caseplan}caseplanAssessmentGroupComments" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplanBase">
+        <xs:sequence>
+          <xs:element name="caseplanAssessments" type="caseplan:caseplanAssessment" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="caseplanAssessmentGroupComments" type="caseplan:caseplanAssessmentGroupComments" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanBasicAssessmentsAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanBasicAssessmentsAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanBasicAssessmentsAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplanBase">
+&lt;sequence>
+&lt;element name="caseplanAssessmentsAudit" type="{http://gov/usc/codex/pacts/caseplan}caseplanAssessmentAudit" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="caseplanAssessmentGroupCommentsAudit" type="{http://gov/usc/codex/pacts/caseplan}caseplanAssessmentGroupCommentsAudit" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplanBase">
+        <xs:sequence>
+          <xs:element name="caseplanAssessmentsAudit" type="caseplan:caseplanAssessmentAudit" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="caseplanAssessmentGroupCommentsAudit" type="caseplan:caseplanAssessmentGroupCommentsAudit" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanCompleteAssessments">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanCompleteAssessments complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanCompleteAssessments">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplanBase">
+&lt;sequence>
+&lt;element name="client" type="{http://gov/usc/codex/pacts/client}simpleClient" minOccurs="0"/>
+&lt;element name="caseplanAssessmentComplete" type="{http://gov/usc/codex/pacts/caseplan}caseplanAssessmentComplete" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplanBase">
+        <xs:sequence>
+          <xs:element name="client" type="client:simpleClient" minOccurs="0"/>
+          <xs:element name="caseplanAssessmentComplete" type="caseplan:caseplanAssessmentComplete" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanConditionsAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanConditionsAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanConditionsAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplanBase">
+&lt;sequence>
+&lt;element name="client" type="{http://gov/usc/codex/pacts/client}simpleClient" minOccurs="0"/>
+&lt;element name="simplePostConvictionCondition" type="{http://gov/usc/codex/pacts/postconviction}simplePostConvictionCondition" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplanBase">
+        <xs:sequence>
+          <xs:element name="client" type="client:simpleClient" minOccurs="0"/>
+          <xs:element name="simplePostConvictionCondition" type="postconviction:simplePostConvictionCondition" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanCurrentEmploymentSummaryAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanCurrentEmploymentSummaryAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanCurrentEmploymentSummaryAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplan">
+&lt;sequence>
+&lt;element name="client" type="{http://gov/usc/codex/pacts/client}simpleClient" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;element name="employmentSummary" type="{http://gov/usc/codex/pacts/employment}simpleEmploymentSummaryWithOtherIncomeAudit" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplan">
+        <xs:sequence>
+          <xs:element name="client" type="client:simpleClient" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="employmentSummary" type="employment:simpleEmploymentSummaryWithOtherIncomeAudit" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanInformation">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanInformation complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanInformation">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplanBase">
+&lt;sequence>
+&lt;element name="approveBy" type="{http://gov/usc/codex/pacts/district}simpleStaff" minOccurs="0"/>
+&lt;element name="client" type="{http://gov/usc/codex/pacts/client}simpleClient" minOccurs="0"/>
+&lt;element name="submitBy" type="{http://gov/usc/codex/pacts/district}simpleStaff" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplanBase">
+        <xs:sequence>
+          <xs:element name="approveBy" type="district:simpleStaff" minOccurs="0"/>
+          <xs:element name="client" type="client:simpleClient" minOccurs="0"/>
+          <xs:element name="submitBy" type="district:simpleStaff" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanInformationAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanInformationAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanInformationAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplanInformation">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplanInformation">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanRPIScore">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanRPIScore complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanRPIScore">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplanBase">
+&lt;sequence>
+&lt;element name="rpiInfo" type="{http://gov/usc/codex/pacts/caseplan}caseplanRPI" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplanBase">
+        <xs:sequence>
+          <xs:element name="rpiInfo" type="caseplan:caseplanRPI" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanSnapshotClientProfileAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanSnapshotClientProfileAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanSnapshotClientProfileAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplan">
+&lt;sequence>
+&lt;element name="clientProfile" type="{http://gov/usc/codex/pacts/client}simpleClientFullProfileAllAudit" minOccurs="0"/>
+&lt;element name="extendedClientProfile" type="{http://gov/usc/codex/pacts/client}simpleExtendedClientProfileAllAudit" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplan">
+        <xs:sequence>
+          <xs:element name="clientProfile" type="client:simpleClientFullProfileAllAudit" minOccurs="0"/>
+          <xs:element name="extendedClientProfile" type="client:simpleExtendedClientProfileAllAudit" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanSnapshotConditionsAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanSnapshotConditionsAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanSnapshotConditionsAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplan">
+&lt;sequence>
+&lt;element name="client" type="{http://gov/usc/codex/pacts/client}simpleClient" minOccurs="0"/>
+&lt;element name="snapshotCaseplanConditions" type="{http://gov/usc/codex/pacts/caseplan}caseplanConditionAudit" maxOccurs="unbounded" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplan">
+        <xs:sequence>
+          <xs:element name="client" type="client:simpleClient" minOccurs="0"/>
+          <xs:element name="snapshotCaseplanConditions" type="caseplan:caseplanConditionAudit" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanSnapshotEmploymentSummaryAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanSnapshotEmploymentSummaryAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanSnapshotEmploymentSummaryAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplan">
+&lt;sequence>
+&lt;element name="client" type="{http://gov/usc/codex/pacts/client}simpleClient" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;element name="employmentSummary" type="{http://gov/usc/codex/pacts/employment}simpleEmploymentSummaryWithOtherIncomeAudit" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplan">
+        <xs:sequence>
+          <xs:element name="client" type="client:simpleClient" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="employmentSummary" type="employment:simpleEmploymentSummaryWithOtherIncomeAudit" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleCaseplanStatutoryRequirements">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleCaseplanStatutoryRequirements complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleCaseplanStatutoryRequirements">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/caseplan}simpleCaseplanBase">
+&lt;sequence>
+&lt;element name="statutoryRequirements" type="{http://gov/usc/codex/pacts/caseplan}caseplanStatutoryRequirements" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="caseplan:simpleCaseplanBase">
+        <xs:sequence>
+          <xs:element name="statutoryRequirements" type="caseplan:caseplanStatutoryRequirements" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

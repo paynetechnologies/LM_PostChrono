@@ -1,0 +1,6 @@
+15:14:52,483 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChronoService -  <==== Starting RetryPostChronos ====>
+15:14:55,373 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChronoService - RetryPostChronos ### total number of chronos to retry : 35
+15:15:06,724 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChronoService -  ### Total retries 35 : total posted 32 : total failed 3
+15:15:06,729 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChronoService -  <==== Finsihed PostFailedChrono ====>
+15:17:01,686 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChronoService -  <==== Starting RetryPostChronos ====>
+15:17:11,577 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChronoService - RetryPostChronos ### total number of chronos to retry : 6

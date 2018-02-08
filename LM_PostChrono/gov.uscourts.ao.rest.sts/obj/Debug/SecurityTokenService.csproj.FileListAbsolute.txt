@@ -1,0 +1,8 @@
+C:\Projects\O&M\ERSDEMO-2217\RestTest\SecurityTokenService\bin\Debug\SecurityTokenService.dll
+C:\Projects\O&M\ERSDEMO-2217\RestTest\SecurityTokenService\bin\Debug\SecurityTokenService.pdb
+C:\Projects\O&M\ERSDEMO-2217\RestTest\SecurityTokenService\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\O&M\ERSDEMO-2217\RestTest\SecurityTokenService\bin\Debug\RestSharp.dll
+C:\Projects\O&M\ERSDEMO-2217\RestTest\SecurityTokenService\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\O&M\ERSDEMO-2217\RestTest\SecurityTokenService\bin\Debug\RestSharp.xml
+C:\Projects\O&M\ERSDEMO-2217\RestTest\SecurityTokenService\obj\Debug\SecurityTokenService.dll
+C:\Projects\O&M\ERSDEMO-2217\RestTest\SecurityTokenService\obj\Debug\SecurityTokenService.pdb

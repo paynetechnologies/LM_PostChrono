@@ -1,0 +1,28 @@
+06:24:09,668 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestDistrict -  PACTSRestDistrict GetStaffName GetStaffName Parameters : StaffId 364, districtId 0970
+06:25:46,634 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestDistrict -  PACTSRestDistrict GetStaffName GetPactsType failed : StaffId AZX-70728, districtId 0970
+06:26:25,031 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestDistrict -  PACTSRestDistrict GetStaffName GetStaffName Parameters : StaffId 364, districtId 0970
+06:28:00,690 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestDistrict -  PACTSRestDistrict GetStaffName GetStaffName Parameters : StaffId 364, districtId 0970
+06:28:38,458 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Starting RetryPostChronos ====>
+06:28:38,733 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono - RetryPostChronos ### total number of chronos to retry : 7
+06:30:12,366 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Starting RetryPostChronos ====>
+06:30:19,895 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono - RetryPostChronos ### total number of chronos to retry : 7
+06:33:28,906 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Starting RetryPostChronos ====>
+06:33:33,372 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono - RetryPostChronos ### total number of chronos to retry : 7
+06:35:11,132 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Starting RetryPostChronos ====>
+06:35:14,468 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono - RetryPostChronos ### total number of chronos to retry : 7
+06:35:55,896 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Starting RetryPostChronos ====>
+06:35:59,176 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono - RetryPostChronos ### total number of chronos to retry : 7
+06:36:22,887 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Starting RetryPostChronos ====>
+06:36:26,134 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono - RetryPostChronos ### total number of chronos to retry : 7
+06:38:00,327 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Starting RetryPostChronos ====>
+06:38:03,560 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono - RetryPostChronos ### total number of chronos to retry : 7
+06:39:52,245 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Starting RetryPostChronos ====>
+06:40:01,038 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono - RetryPostChronos ### total number of chronos to retry : 6
+06:50:31,126 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Starting RetryPostChronos ====>
+06:50:34,452 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono - RetryPostChronos ### total number of chronos to retry : 5
+06:50:42,732 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  ### Total retries 5 : total posted 5 : total failed 0
+06:50:42,736 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Finsihed PostFailedChrono ====>
+06:50:56,755 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Starting RetryPostChronos ====>
+06:51:03,526 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono - RetryPostChronos ### total number of chronos to retry : 0
+06:51:11,590 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  ### Total retries 0 : total posted 0 : total failed 0
+06:51:13,724 INFO  gov.uscourts.ao.rest.pacts.Services.PACTSRestChrono -  <==== Finsihed PostFailedChrono ====>

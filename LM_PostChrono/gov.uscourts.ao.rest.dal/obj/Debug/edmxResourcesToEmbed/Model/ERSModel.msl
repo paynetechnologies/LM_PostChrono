@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ersModelStoreContainer" CdmEntityContainer="ersEntities">
+    <EntitySetMapping Name="ClientAssign">
+      <EntityTypeMapping TypeName="ersModel.ClientAssign">
+        <MappingFragment StoreEntitySet="ClientAssign">
+          <ScalarProperty Name="AssignNum" ColumnName="AssignNum" />
+          <ScalarProperty Name="CCID" ColumnName="CCID" />
+          <ScalarProperty Name="CSID" ColumnName="CSID" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+          <ScalarProperty Name="PactsType" ColumnName="PactsType" />
+          <ScalarProperty Name="QuestionSetID" ColumnName="QuestionSetID" />
+          <ScalarProperty Name="office_location" ColumnName="office_location" />
+          <ScalarProperty Name="Schedule" ColumnName="Schedule" />
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DateRegistered" ColumnName="DateRegistered" />
+          <ScalarProperty Name="RegisteredBy" ColumnName="RegisteredBy" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Enrolled" ColumnName="Enrolled" />
+          <ScalarProperty Name="DateEnrolled" ColumnName="DateEnrolled" />
+          <ScalarProperty Name="EnrolledBy" ColumnName="EnrolledBy" />
+          <ScalarProperty Name="DateDeactivated" ColumnName="DateDeactivated" />
+          <ScalarProperty Name="DeactivatedBy" ColumnName="DeactivatedBy" />
+          <ScalarProperty Name="PACTS_Closed" ColumnName="PACTS_Closed" />
+          <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

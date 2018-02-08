@@ -1,0 +1,4 @@
+C:\Projects\Repos\ERSDEMO-3423\Devl\Post Chrono v4 05.23.16\gov.uscourts.ao.rest.templateServices\bin\Debug\gov.uscourts.ao.rest.templateServices.dll
+C:\Projects\Repos\ERSDEMO-3423\Devl\Post Chrono v4 05.23.16\gov.uscourts.ao.rest.templateServices\bin\Debug\gov.uscourts.ao.rest.templateServices.pdb
+C:\Projects\Repos\ERSDEMO-3423\Devl\Post Chrono v4 05.23.16\gov.uscourts.ao.rest.templateServices\obj\Debug\gov.uscourts.ao.rest.templateServices.dll
+C:\Projects\Repos\ERSDEMO-3423\Devl\Post Chrono v4 05.23.16\gov.uscourts.ao.rest.templateServices\obj\Debug\gov.uscourts.ao.rest.templateServices.pdb

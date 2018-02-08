@@ -1,0 +1,12 @@
+08:42:42,641 INFO  gov.uscourts.ao.rest.service.AORESTChronoService -  <==== Starting RetryPostChronos ====>
+11:45:56,866 INFO  gov.uscourts.ao.rest.service.AORESTChronoService -  <==== Starting RetryPostChronos ====>
+12:25:31,611 INFO  gov.uscourts.ao.rest.service.AORESTChronoService -  <==== Starting RetryPostChronos ====>
+12:25:35,063 INFO  gov.uscourts.ao.rest.service.AORESTChronoService - RetryPostChronos ### total number of chronos to retry : 32
+12:25:51,302 INFO  gov.uscourts.ao.rest.service.AORESTChronoService -  ### Total retries 32 : total posted 32 : total failed 0
+12:25:51,302 INFO  gov.uscourts.ao.rest.service.AORESTChronoService -  <==== Finsihed PostFailedChrono ====>
+13:16:59,968 INFO  gov.uscourts.ao.rest.service.AORESTChronoService -  <==== Starting RetryPostChronos ====>
+13:17:05,696 INFO  gov.uscourts.ao.rest.service.AORESTChronoService - RetryPostChronos ### total number of chronos to retry : 32
+13:23:05,611 INFO  gov.uscourts.ao.rest.service.AORESTChronoService -  <==== Starting RetryPostChronos ====>
+13:23:09,371 INFO  gov.uscourts.ao.rest.service.AORESTChronoService - RetryPostChronos ### total number of chronos to retry : 32
+13:23:32,195 INFO  gov.uscourts.ao.rest.service.AORESTChronoService -  ### Total retries 32 : total posted 32 : total failed 0
+13:23:32,195 INFO  gov.uscourts.ao.rest.service.AORESTChronoService -  <==== Finsihed PostFailedChrono ====>

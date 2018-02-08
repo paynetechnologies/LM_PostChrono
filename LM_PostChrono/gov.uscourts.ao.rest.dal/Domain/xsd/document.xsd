@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/document" xmlns:core="http://gov/usc/codex/core" xmlns:document="http://gov/usc/codex/pacts/document" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:complexType name="documentImage">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for documentImage complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="documentImage">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+&lt;element name="docDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="docType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="docketDefendantId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="document" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
+&lt;element name="extension" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="isConfidential" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="isCrawlable" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="location" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="notes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="probOrPretrial" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="sealed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="vccaInd" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="1"/>
+          <xs:element name="docDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="docType" type="xs:string" minOccurs="0"/>
+          <xs:element name="docketDefendantId" type="xs:string" minOccurs="0"/>
+          <xs:element name="document" type="xs:base64Binary" minOccurs="0"/>
+          <xs:element name="extension" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="isConfidential" type="xs:string" minOccurs="0"/>
+          <xs:element name="isCrawlable" type="xs:string" minOccurs="0"/>
+          <xs:element name="location" type="xs:string" minOccurs="0"/>
+          <xs:element name="notes" type="xs:string" minOccurs="0"/>
+          <xs:element name="probOrPretrial" type="xs:string" minOccurs="0"/>
+          <xs:element name="sealed" type="xs:string" minOccurs="0"/>
+          <xs:element name="vccaInd" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

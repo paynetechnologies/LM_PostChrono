@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/employment" xmlns:client="http://gov/usc/codex/pacts/client" xmlns:core="http://gov/usc/codex/core" xmlns:employment="http://gov/usc/codex/pacts/employment" xmlns:reftype="http://gov/usc/codex/pacts/reftype" xmlns:district="http://gov/usc/codex/pacts/district" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/pacts/client" schemaLocation="client.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/reftype" schemaLocation="reftype.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/district" schemaLocation="district.xsd"/>
+  <xs:complexType name="clientEmployment">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for clientEmployment complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="clientEmployment">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/client}clientBase">
+&lt;sequence>
+&lt;element name="employmentSummaries" type="{http://gov/usc/codex/pacts/employment}employmentSummary" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="employments" type="{http://gov/usc/codex/pacts/employment}employment" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="unemployments" type="{http://gov/usc/codex/pacts/employment}unemployment" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="client:clientBase">
+        <xs:sequence>
+          <xs:element name="employmentSummaries" type="employment:employmentSummary" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="employments" type="employment:employment" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="unemployments" type="employment:unemployment" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="employer">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for employer complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="employer">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="address1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="address2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="beeper" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="city" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="companyName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="county" type="{http://gov/usc/codex/pacts/reftype}county" minOccurs="0"/>
+&lt;element name="countyId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="firstName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="lastName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="latitude" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="longitude" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="oldMiddleName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="state" type="{http://gov/usc/codex/pacts/reftype}state" minOccurs="0"/>
+&lt;element name="stateId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="supvTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="zipCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="address1" type="xs:string" minOccurs="0"/>
+          <xs:element name="address2" type="xs:string" minOccurs="0"/>
+          <xs:element name="beeper" type="xs:string" minOccurs="0"/>
+          <xs:element name="city" type="xs:string" minOccurs="0"/>
+          <xs:element name="companyName" type="xs:string" minOccurs="0"/>
+          <xs:element name="county" type="reftype:county" minOccurs="0"/>
+          <xs:element name="countyId" type="xs:string" minOccurs="0"/>
+          <xs:element name="email" type="xs:string" minOccurs="0"/>
+          <xs:element name="fax" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="latitude" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="longitude" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="oldMiddleName" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0"/>
+          <xs:element name="state" type="reftype:state" minOccurs="0"/>
+          <xs:element name="stateId" type="xs:string" minOccurs="0"/>
+          <xs:element name="supvTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="employment">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for employment complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="employment">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="canContact" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="dailySchedule" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="earnedIncome" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="empLeaveReason" type="{http://gov/usc/codex/pacts/reftype}empLeaveReason" minOccurs="0"/>
+&lt;element name="empLeaveReasonId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="emplFromDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="emplToDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="employer" type="{http://gov/usc/codex/pacts/employment}employer" minOccurs="0"/>
+&lt;element name="employerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="employerKnows" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="employmentBenefits" type="{http://gov/usc/codex/pacts/employment}employmentBenefit" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="hoursPerWeek" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="jobTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="occupation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="othReasonLeave" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="returnToJob" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="selfEmployed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="skillsTraining" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="underEmployed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="verReasonLeave" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="canContact" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="dailySchedule" type="xs:string" minOccurs="0"/>
+          <xs:element name="earnedIncome" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="empLeaveReason" type="reftype:empLeaveReason" minOccurs="0"/>
+          <xs:element name="empLeaveReasonId" type="xs:string" minOccurs="0"/>
+          <xs:element name="emplFromDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="emplToDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="employer" type="employment:employer" minOccurs="0"/>
+          <xs:element name="employerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="employerKnows" type="xs:string" minOccurs="0"/>
+          <xs:element name="employmentBenefits" type="employment:employmentBenefit" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="hoursPerWeek" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="jobTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="occupation" type="xs:string" minOccurs="0"/>
+          <xs:element name="othReasonLeave" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="returnToJob" type="xs:string" minOccurs="0"/>
+          <xs:element name="selfEmployed" type="xs:string" minOccurs="0"/>
+          <xs:element name="skillsTraining" type="xs:string" minOccurs="0"/>
+          <xs:element name="underEmployed" type="xs:string" minOccurs="0"/>
+          <xs:element name="verReasonLeave" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="employmentBenefit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for employmentBenefit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="employmentBenefit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="benefitType" type="{http://gov/usc/codex/pacts/reftype}emprBeneType" minOccurs="0"/>
+&lt;element name="benefitTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="employmentId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="othBenefitType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="benefitType" type="reftype:emprBeneType" minOccurs="0"/>
+          <xs:element name="benefitTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="employmentId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="othBenefitType" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="employmentSummary">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for employmentSummary complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="employmentSummary">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="empEarnedIncome" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="employStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="excused" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="excusedDueTo" type="{http://gov/usc/codex/pacts/reftype}excusedEmploy" minOccurs="0"/>
+&lt;element name="excusedDueToId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="hoursPerWeek" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="otherExcused" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="otherIncome" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="selfEmployed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="summaryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="summaryType" type="{http://gov/usc/codex/pacts/reftype}empSummType" minOccurs="0"/>
+&lt;element name="summaryTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="underEmployed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="empEarnedIncome" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="employStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="excused" type="xs:string" minOccurs="0"/>
+          <xs:element name="excusedDueTo" type="reftype:excusedEmploy" minOccurs="0"/>
+          <xs:element name="excusedDueToId" type="xs:string" minOccurs="0"/>
+          <xs:element name="hoursPerWeek" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherExcused" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherIncome" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="selfEmployed" type="xs:string" minOccurs="0"/>
+          <xs:element name="summaryDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="summaryType" type="reftype:empSummType" minOccurs="0"/>
+          <xs:element name="summaryTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="underEmployed" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="otherIncome">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for otherIncome complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="otherIncome">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="empSummaryId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="incomeAmount" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="otherSourceType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="sourceTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="sourceType" type="{http://gov/usc/codex/pacts/reftype}otherIncomeSource" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="empSummaryId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="incomeAmount" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="otherSourceType" type="xs:string" minOccurs="0"/>
+          <xs:element name="sourceTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="sourceType" type="reftype:otherIncomeSource" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleEmployment">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleEmployment complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleEmployment">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/employment}simpleEmploymentBase">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="employment:simpleEmploymentBase">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleEmploymentBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleEmploymentBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleEmploymentBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="canContact" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="dailySchedule" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="earnedIncome" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="empLeaveReasonId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="emplFromDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="emplToDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="employerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="employerKnows" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="hoursPerWeek" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="jobTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="occupation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="othReasonLeave" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="returnToJob" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="selfEmployed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="skillsTraining" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="underEmployed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="verReasonLeave" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="canContact" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="dailySchedule" type="xs:string" minOccurs="0"/>
+          <xs:element name="earnedIncome" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="empLeaveReasonId" type="xs:string" minOccurs="0"/>
+          <xs:element name="emplFromDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="emplToDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="employerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="employerKnows" type="xs:string" minOccurs="0"/>
+          <xs:element name="hoursPerWeek" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="jobTitle" type="xs:string" minOccurs="0"/>
+          <xs:element name="occupation" type="xs:string" minOccurs="0"/>
+          <xs:element name="othReasonLeave" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="returnToJob" type="xs:string" minOccurs="0"/>
+          <xs:element name="selfEmployed" type="xs:string" minOccurs="0"/>
+          <xs:element name="skillsTraining" type="xs:string" minOccurs="0"/>
+          <xs:element name="underEmployed" type="xs:string" minOccurs="0"/>
+          <xs:element name="verReasonLeave" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleEmploymentSummary">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleEmploymentSummary complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleEmploymentSummary">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/employment}simpleEmploymentSummaryBase">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="employment:simpleEmploymentSummaryBase">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleEmploymentSummaryBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleEmploymentSummaryBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleEmploymentSummaryBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="empEarnedIncome" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="employStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="excused" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="excusedDueToId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="hoursPerWeek" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="otherExcused" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="otherIncome" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+&lt;element name="selfEmployed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="summaryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="summaryTypeId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="underEmployed" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="empEarnedIncome" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="employStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="excused" type="xs:string" minOccurs="0"/>
+          <xs:element name="excusedDueToId" type="xs:string" minOccurs="0"/>
+          <xs:element name="hoursPerWeek" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherExcused" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherIncome" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="selfEmployed" type="xs:string" minOccurs="0"/>
+          <xs:element name="summaryDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="summaryTypeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="underEmployed" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleEmploymentSummaryWithOtherIncomeAudit">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleEmploymentSummaryWithOtherIncomeAudit complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleEmploymentSummaryWithOtherIncomeAudit">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/employment}simpleEmploymentSummaryBase">
+&lt;sequence>
+&lt;element name="otherIncomes" type="{http://gov/usc/codex/pacts/employment}otherIncome" maxOccurs="unbounded" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="employment:simpleEmploymentSummaryBase">
+        <xs:sequence>
+          <xs:element name="otherIncomes" type="employment:otherIncome" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleUnemployment">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleUnemployment complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleUnemployment">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/employment}simpleUnemploymentBase">
+&lt;sequence>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="employment:simpleUnemploymentBase">
+        <xs:sequence>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="simpleUnemploymentBase">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for simpleUnemploymentBase complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="simpleUnemploymentBase">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="excused" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="excusedDueToId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="fromDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="otherExcused" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="toDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="excused" type="xs:string" minOccurs="0"/>
+          <xs:element name="excusedDueToId" type="xs:string" minOccurs="0"/>
+          <xs:element name="fromDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherExcused" type="xs:string" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="toDate" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="unemployment">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for unemployment complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="unemployment">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="excused" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="excusedDueTo" type="{http://gov/usc/codex/pacts/reftype}excusedEmploy" minOccurs="0"/>
+&lt;element name="excusedDueToId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="fromDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="otherExcused" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="toDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;group ref="{http://gov/usc/codex/core}creationDetail"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="excused" type="xs:string" minOccurs="0"/>
+          <xs:element name="excusedDueTo" type="reftype:excusedEmploy" minOccurs="0"/>
+          <xs:element name="excusedDueToId" type="xs:string" minOccurs="0"/>
+          <xs:element name="fromDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="otherExcused" type="xs:string" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="toDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedOn" type="xs:string" minOccurs="0"/>
+          <xs:element name="updatedBy" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

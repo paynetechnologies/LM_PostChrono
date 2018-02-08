@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://gov/usc/codex/pacts/treatment" xmlns:client="http://gov/usc/codex/pacts/client" xmlns:core="http://gov/usc/codex/core" xmlns:reftype="http://gov/usc/codex/pacts/reftype" xmlns:district="http://gov/usc/codex/pacts/district" xmlns:treatment="http://gov/usc/codex/pacts/treatment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://gov/usc/codex/pacts/client" schemaLocation="client.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/core" schemaLocation="core.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/reftype" schemaLocation="reftype.xsd"/>
+  <xs:import namespace="http://gov/usc/codex/pacts/district" schemaLocation="district.xsd"/>
+  <xs:complexType name="clientTreatmentPlan">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for clientTreatmentPlan complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="clientTreatmentPlan">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/pacts/client}clientBase">
+&lt;sequence>
+&lt;element name="treatplans" type="{http://gov/usc/codex/pacts/treatment}treatPlan" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="client:clientBase">
+        <xs:sequence>
+          <xs:element name="treatplans" type="treatment:treatPlan" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ncTreatPlanService">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for ncTreatPlanService complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="ncTreatPlanService">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="catSubcatId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="paymentSource" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="planDetId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="svcCategoryId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="catSubcatId" type="xs:string" minOccurs="0"/>
+          <xs:element name="paymentSource" type="xs:string" minOccurs="0"/>
+          <xs:element name="planDetId" type="xs:string" minOccurs="0"/>
+          <xs:element name="svcCategoryId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="provider">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for provider complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="provider">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="activeFlag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="adminAddressId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="attention" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="fax" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="providerName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="activeFlag" type="xs:string" minOccurs="0"/>
+          <xs:element name="adminAddressId" type="xs:string" minOccurs="0"/>
+          <xs:element name="attention" type="xs:string" minOccurs="0"/>
+          <xs:element name="fax" type="xs:string" minOccurs="0"/>
+          <xs:element name="phone" type="xs:string" minOccurs="0"/>
+          <xs:element name="providerName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="treatPlan">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for treatPlan complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="treatPlan">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="agentId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="clientId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="contractPgm" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="officerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="officerPhoneId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="outcomeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="outcomeReason" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="pS" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="procurmntPrvodrId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="providerId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="provider" type="{http://gov/usc/codex/pacts/treatment}provider" minOccurs="0"/>
+&lt;element name="termDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="treatPlanDetails" type="{http://gov/usc/codex/pacts/treatment}treatPlanDetail" maxOccurs="unbounded" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="agentId" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+          <xs:element name="contractPgm" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="officerPhoneId" type="xs:string" minOccurs="0"/>
+          <xs:element name="outcomeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="outcomeReason" type="xs:string" minOccurs="0"/>
+          <xs:element name="pS" type="xs:string" minOccurs="0"/>
+          <xs:element name="procurmntPrvodrId" type="xs:string" minOccurs="0"/>
+          <xs:element name="providerId" type="xs:string" minOccurs="0"/>
+          <xs:element name="provider" type="treatment:provider" minOccurs="0"/>
+          <xs:element name="termDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="treatPlanDetails" type="treatment:treatPlanDetail" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="treatPlanDetail">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[<p>Java class for treatPlanDetail complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="treatPlanDetail">
+&lt;complexContent>
+&lt;extension base="{http://gov/usc/codex/core}codexElement">
+&lt;sequence>
+&lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="approvStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="clientAddressId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="clientPhoneId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="copayAmt" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="copayPercent" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="copaySource" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="effectiveDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="endDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="ncTreatPlanServices" type="{http://gov/usc/codex/pacts/treatment}ncTreatPlanService" maxOccurs="unbounded" minOccurs="0"/>
+&lt;element name="planId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="previousDetId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="profileId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="provdrAddressId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="prvdrAttn" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="prvdrFaxId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="prvdrPhoneId" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+&lt;element name="remarks" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;element name="reviewDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+&lt;element name="statusCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+&lt;/sequence>
+&lt;/extension>
+&lt;/complexContent>
+&lt;/complexType>
+</pre>]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="core:codexElement">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="approvStatus" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientAddressId" type="xs:string" minOccurs="0"/>
+          <xs:element name="clientPhoneId" type="xs:string" minOccurs="0"/>
+          <xs:element name="copayAmt" type="xs:string" minOccurs="0"/>
+          <xs:element name="copayPercent" type="xs:string" minOccurs="0"/>
+          <xs:element name="copaySource" type="xs:string" minOccurs="0"/>
+          <xs:element name="effectiveDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="endDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="ncTreatPlanServices" type="treatment:ncTreatPlanService" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="planId" type="xs:string" minOccurs="0"/>
+          <xs:element name="previousDetId" type="xs:string" minOccurs="0"/>
+          <xs:element name="profileId" type="xs:string" minOccurs="0"/>
+          <xs:element name="provdrAddressId" type="xs:string" minOccurs="0"/>
+          <xs:element name="prvdrAttn" type="xs:string" minOccurs="0"/>
+          <xs:element name="prvdrFaxId" type="xs:string" minOccurs="0"/>
+          <xs:element name="prvdrPhoneId" type="xs:string" minOccurs="0"/>
+          <xs:element name="remarks" type="xs:string" minOccurs="0"/>
+          <xs:element name="reviewDate" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

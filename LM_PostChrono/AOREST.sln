@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOREST", "AOREST\AOREST.csproj", "{A0D70BBE-584A-4595-86CD-5D38DE5B2CAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gov.uscourts.ao.rest.test", "gov.uscourts.ao.rest.test\gov.uscourts.ao.rest.test.csproj", "{8F2FBF1D-B9D3-4D78-873F-1A3AD600110D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gov.uscourts.ao.rest.sts", "gov.uscourts.ao.rest.sts\gov.uscourts.ao.rest.sts.csproj", "{79249C85-BC9E-413D-A933-D29670832FD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gov.uscourts.ao.rest.pacts", "gov.uscourts.ao.rest.services\gov.uscourts.ao.rest.pacts.csproj", "{12CA92CB-F5B9-4BB3-8A93-1F7170D13300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gov.uscourts.ao.rest.dal", "gov.uscourts.ao.rest.dal\gov.uscourts.ao.rest.dal.csproj", "{E96C2819-C88F-4CDA-B76D-3189F3B20EC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gov.uscourts.ao.rest.client", "gov.uscourts.ao.rest.client\gov.uscourts.ao.rest.client.csproj", "{DD939911-D078-4273-A2DF-E21B9BC9125E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gov.uscourts.ao.rest.common", "gov.uscourts.ao.rest.common\gov.uscourts.ao.rest.common.csproj", "{A8A930AC-7A10-465D-9337-682F9767B21F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gov.uscourts.ao.rest.ts", "gov.uscourts.ao.rest.templateServices\gov.uscourts.ao.rest.ts.csproj", "{0BEA25F1-8B3F-4667-9276-AD1F0C5A83B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0D70BBE-584A-4595-86CD-5D38DE5B2CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D70BBE-584A-4595-86CD-5D38DE5B2CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D70BBE-584A-4595-86CD-5D38DE5B2CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D70BBE-584A-4595-86CD-5D38DE5B2CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F2FBF1D-B9D3-4D78-873F-1A3AD600110D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F2FBF1D-B9D3-4D78-873F-1A3AD600110D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F2FBF1D-B9D3-4D78-873F-1A3AD600110D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F2FBF1D-B9D3-4D78-873F-1A3AD600110D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79249C85-BC9E-413D-A933-D29670832FD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79249C85-BC9E-413D-A933-D29670832FD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79249C85-BC9E-413D-A933-D29670832FD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79249C85-BC9E-413D-A933-D29670832FD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12CA92CB-F5B9-4BB3-8A93-1F7170D13300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12CA92CB-F5B9-4BB3-8A93-1F7170D13300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12CA92CB-F5B9-4BB3-8A93-1F7170D13300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12CA92CB-F5B9-4BB3-8A93-1F7170D13300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E96C2819-C88F-4CDA-B76D-3189F3B20EC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96C2819-C88F-4CDA-B76D-3189F3B20EC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96C2819-C88F-4CDA-B76D-3189F3B20EC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96C2819-C88F-4CDA-B76D-3189F3B20EC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD939911-D078-4273-A2DF-E21B9BC9125E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD939911-D078-4273-A2DF-E21B9BC9125E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD939911-D078-4273-A2DF-E21B9BC9125E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD939911-D078-4273-A2DF-E21B9BC9125E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A930AC-7A10-465D-9337-682F9767B21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A930AC-7A10-465D-9337-682F9767B21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A930AC-7A10-465D-9337-682F9767B21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A930AC-7A10-465D-9337-682F9767B21F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BEA25F1-8B3F-4667-9276-AD1F0C5A83B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BEA25F1-8B3F-4667-9276-AD1F0C5A83B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BEA25F1-8B3F-4667-9276-AD1F0C5A83B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BEA25F1-8B3F-4667-9276-AD1F0C5A83B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35;packages\Unity.2.1.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal

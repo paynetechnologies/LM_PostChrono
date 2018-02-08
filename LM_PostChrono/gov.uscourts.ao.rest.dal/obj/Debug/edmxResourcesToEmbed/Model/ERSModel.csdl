@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ClientAssign">
+    <Key>
+      <PropertyRef Name="AssignNum" />
+    </Key>
+    <Property Name="AssignNum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CCID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CSID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StaffName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PactsType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="QuestionSetID" Type="Int32" />
+    <Property Name="office_location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Schedule" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Venue" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="DateRegistered" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RegisteredBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DateModified" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Enrolled" Type="Boolean" />
+    <Property Name="DateEnrolled" Type="DateTime" Precision="3" />
+    <Property Name="EnrolledBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DateDeactivated" Type="DateTime" Precision="3" />
+    <Property Name="DeactivatedBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PACTS_Closed" Type="Boolean" />
+    <Property Name="ScheduleID" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="ersEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClientAssign" EntityType="Self.ClientAssign" />
+  </EntityContainer>
+</Schema>

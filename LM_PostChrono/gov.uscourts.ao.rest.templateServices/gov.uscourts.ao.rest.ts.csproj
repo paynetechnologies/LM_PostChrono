@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BEA25F1-8B3F-4667-9276-AD1F0C5A83B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gov.uscourts.ao.rest.ts</RootNamespace>
+    <AssemblyName>gov.uscourts.ao.rest.ts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.104.5.0\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Staff.cs" />
+    <Compile Include="Interfaces\ITSRestStaff.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\TSRestStaff.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gov.uscourts.ao.rest.client\gov.uscourts.ao.rest.client.csproj">
+      <Project>{dd939911-d078-4273-a2df-e21b9bc9125e}</Project>
+      <Name>gov.uscourts.ao.rest.client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gov.uscourts.ao.rest.common\gov.uscourts.ao.rest.common.csproj">
+      <Project>{a8a930ac-7a10-465d-9337-682f9767b21f}</Project>
+      <Name>gov.uscourts.ao.rest.common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gov.uscourts.ao.rest.dal\gov.uscourts.ao.rest.dal.csproj">
+      <Project>{e96c2819-c88f-4cda-b76d-3189f3b20ec7}</Project>
+      <Name>gov.uscourts.ao.rest.dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gov.uscourts.ao.rest.sts\gov.uscourts.ao.rest.sts.csproj">
+      <Project>{79249c85-bc9e-413d-a933-d29670832fd8}</Project>
+      <Name>gov.uscourts.ao.rest.sts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
